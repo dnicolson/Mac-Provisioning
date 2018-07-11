@@ -5,7 +5,6 @@ if test ! $(which brew); then
 fi
 
 brew bundle
-brew cask install https://raw.githubusercontent.com/eenick/homebrew-cask/fadcd564c0afe00786df5eacdc42d9ba31dd23a7/Casks/tower.rb
 
 read -p "Setup Dropbox and press any key..."
 
