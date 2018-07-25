@@ -1,0 +1,13 @@
+# Use scroll gesture with the Ctrl (^) modifier key to zoom
+defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool TRUE
+defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
+
+# Disable the “are you sure you want to open this application?” dialog
+defaults write com.apple.LaunchServices LSQuarantine -bool FALSE
+
+# Use list view in all Finder windows by default
+# Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
+defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
+
+# Kill iTunes Helper
+osascript -e 'tell application "System Events" to delete login item "iTunesHelper"'

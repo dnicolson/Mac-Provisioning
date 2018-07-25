@@ -44,3 +44,5 @@ dockutil --no-restart --add "/Applications/Utilities/Activity Monitor.app"
 dockutil --no-restart --add "/Applications/iTerm.app"
 
 killall Dock
+
+./defaults.sh
