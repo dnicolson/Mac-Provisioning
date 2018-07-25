@@ -46,3 +46,5 @@ dockutil --no-restart --add "/Applications/iTerm.app"
 killall Dock
 
 ./defaults.sh
+
+duti handlers.duti
