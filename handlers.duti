@@ -44,6 +44,8 @@ com.sublimetext.3 .temp   all
 com.sublimetext.3 .tmp    all
 com.sublimetext.3 .class  all
 com.sublimetext.3 .yml    all
+com.sublimetext.3 .sh     all
+com.sublimetext.3 .fish   all
 
 com.google.chrome http  all
 com.google.chrome https all
