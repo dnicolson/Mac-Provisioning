@@ -46,6 +46,7 @@ com.sublimetext.3 .class  all
 com.sublimetext.3 .yml    all
 com.sublimetext.3 .sh     all
 com.sublimetext.3 .fish   all
+com.sublimetext.3 .plist  all
 
 com.google.chrome http  all
 com.google.chrome https all
