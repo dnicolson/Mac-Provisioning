@@ -52,3 +52,24 @@ com.google.chrome http  all
 com.google.chrome https all
 
 it.bloop.airmail2 mailto
+
+org.videolan.vlc .mp4 all
+org.videolan.vlc .mkv all
+org.videolan.vlc .avi all
+
+cx.c3.theunarchiver .7z     all
+cx.c3.theunarchiver .cab    all
+cx.c3.theunarchiver .gtar   all
+cx.c3.theunarchiver .gz     all
+cx.c3.theunarchiver .hqx    all
+cx.c3.theunarchiver .jar    all
+cx.c3.theunarchiver .msi    all
+cx.c3.theunarchiver .rar    all
+cx.c3.theunarchiver .sit    all
+cx.c3.theunarchiver .sit    all
+cx.c3.theunarchiver .tar    all
+cx.c3.theunarchiver .tar.gz all
+cx.c3.theunarchiver .tgz    all
+cx.c3.theunarchiver .zip    all
+
+com.webinhq.ReadKit feed
