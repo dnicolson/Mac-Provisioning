@@ -8,6 +8,9 @@ brew bundle
 
 read -p "Setup Dropbox and press any key..."
 
+brew cask install ~/Dropbox/Code/Provisioning/phoneview.rb
+cp ~/Dropbox/Code/Provisioning/PixelSnap-1.4.1.dmg ~/Library/Caches/Homebrew/Cask/pixelsnap--1.4.1.dmg && brew cask install ~/Dropbox/Code/Provisioning/pixelsnap.rb
+
 defaults write com.runningwithcrayons.Alfred-Preferences-3 dropbox.allowappsfolder -bool TRUE
 
 mackup restore

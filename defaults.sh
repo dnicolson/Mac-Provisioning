@@ -18,3 +18,4 @@ osascript -e 'tell application "System Events" to make login item at end with pr
 osascript -e 'tell application "System Events" to make login item at end with properties {name: "Itsycal", path: "/Applications/Itsycal.app"}'
 osascript -e 'tell application "System Events" to make login item at end with properties {name: "HighSierraMediaKeyEnabler", path: "/Applications/HighSierraMediaKeyEnabler.app"}'
 osascript -e 'tell application "System Events" to make login item at end with properties {name: "Rocket", path: "/Applications/Rocket.app"}'
+osascript -e 'tell application "System Events" to make login item at end with properties {name: "PixelSnap", path: "/Applications/PixelSnap.app"}'
