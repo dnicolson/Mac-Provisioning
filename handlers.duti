@@ -66,10 +66,12 @@ cx.c3.theunarchiver .jar    all
 cx.c3.theunarchiver .msi    all
 cx.c3.theunarchiver .rar    all
 cx.c3.theunarchiver .sit    all
-cx.c3.theunarchiver .sit    all
 cx.c3.theunarchiver .tar    all
 cx.c3.theunarchiver .tar.gz all
 cx.c3.theunarchiver .tgz    all
 cx.c3.theunarchiver .zip    all
 
 com.webinhq.ReadKit feed
+
+com.apple.iBooksX .epub all
+
