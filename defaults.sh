@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Use scroll gesture with the Ctrl (^) modifier key to zoom
 defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool TRUE
 defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144

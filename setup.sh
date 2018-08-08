@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 xcode-select --install
 
 if test ! $(which brew); then
