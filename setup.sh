@@ -1,36 +1,48 @@
 #!/usr/bin/env bash
 
+# Xcode
 xcode-select --install
 
+# Homebrew
 if test ! $(which brew); then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
+# Install Brews, Casks and MAS apps
 brew bundle
 
+# Install Node
 export NVM_DIR="$HOME/.nvm"
 . "$(brew --prefix nvm)/nvm.sh"
 nvm install stable
 
+# Install Ruby
 rbenv install `rbenv install -l | grep -v - | tail -1`
 
 read -p "Setup Dropbox and press any key..."
 
+# Custom Casks
 brew cask install ~/Dropbox/Code/Provisioning/phoneview.rb
 cp ~/Dropbox/Code/Provisioning/PixelSnap-1.4.1.dmg ~/Library/Caches/Homebrew/Cask/pixelsnap--1.4.1.dmg && brew cask install ~/Dropbox/Code/Provisioning/pixelsnap.rb
 
+# Allow ~/Dropbox/Apps path for Alfred preferences
 defaults write com.runningwithcrayons.Alfred-Preferences-3 dropbox.allowappsfolder -bool TRUE
 
+# Symlink application settings from Dropbox
 mackup restore
 
+# fish shell
 echo /usr/local/bin/fish | sudo tee -a /etc/shells
 chsh -s /usr/local/bin/fish
 fish -c fisher
 
+# Restart QuickLook
 qlmanage -r
 
+# Show ~/Library folder
 chflags nohidden ~/Library/
 
+# Customise Dock
 dockutil --no-restart --remove all
 dockutil --no-restart --add "/Applications/System Preferences.app"
 dockutil --no-restart --add "/Applications/iTunes.app"
