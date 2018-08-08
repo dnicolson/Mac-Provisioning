@@ -8,6 +8,8 @@ fi
 
 brew bundle
 
+rbenv install `rbenv install -l | grep -v - | tail -1`
+
 read -p "Setup Dropbox and press any key..."
 
 brew cask install ~/Dropbox/Code/Provisioning/phoneview.rb
