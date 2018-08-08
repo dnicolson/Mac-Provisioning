@@ -18,12 +18,13 @@ brew "mackup"
 brew "mas"
 brew "memcached", restart_service: true
 brew "mysql", restart_service: true
+brew "nvm"
 brew "php"
 brew "postgresql"
 brew "rbenv"
 brew "redis", restart_service: true
 brew "telnet"
-brew "yarn"
+brew "yarn", args: ["without-node"]
 
 cask "0xed"
 cask "alfred"
@@ -41,6 +42,7 @@ cask "ios-console"
 cask "iterm2"
 cask "itsycal"
 cask "mark-text"
+cask "openemu"
 cask "paragon-ntfs"
 cask "qlcolorcode"
 cask "qlimagesize"

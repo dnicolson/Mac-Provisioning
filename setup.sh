@@ -8,6 +8,10 @@ fi
 
 brew bundle
 
+export NVM_DIR="$HOME/.nvm"
+. "$(brew --prefix nvm)/nvm.sh"
+nvm install stable
+
 rbenv install `rbenv install -l | grep -v - | tail -1`
 
 read -p "Setup Dropbox and press any key..."
