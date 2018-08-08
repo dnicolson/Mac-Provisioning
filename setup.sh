@@ -17,7 +17,7 @@ mackup restore
 
 echo /usr/local/bin/fish | sudo tee -a /etc/shells
 chsh -s /usr/local/bin/fish
-curl -L https://get.oh-my.fish | fish
+fish -c fisher
 
 qlmanage -r
 
