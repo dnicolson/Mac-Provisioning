@@ -8,6 +8,7 @@ brew "atomicparsley"
 brew "certbot"
 brew "dnsmasq", restart_service: true
 brew "docker-compose"
+brew "dockutil"
 brew "duti"
 brew "ffmpeg"
 brew "fish"
@@ -24,7 +25,7 @@ brew "redis", restart_service: true
 brew "telnet"
 brew "yarn"
 
-cask "0xED"
+cask "0xed"
 cask "alfred"
 cask "apptrap"
 cask "bbedit"
