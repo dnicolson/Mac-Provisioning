@@ -6,7 +6,6 @@ tap "homebrew/cask-versions"
 
 brew "atomicparsley"
 brew "certbot"
-brew "dnsmasq", restart_service: true
 brew "docker-compose"
 brew "dockutil"
 brew "duti"
