@@ -23,6 +23,7 @@ brew "postgresql"
 brew "rbenv"
 brew "redis", restart_service: true
 brew "telnet"
+brew "tig"
 brew "yarn", args: ["without-node"]
 
 cask "0xed"
