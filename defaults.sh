@@ -11,6 +11,10 @@ defaults write com.apple.LaunchServices LSQuarantine -bool FALSE
 # Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
 defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 
+# Disable swipe navigation in Chrome
+defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool FALSE
+defaults write com.google.Chrome.canary AppleEnableSwipeNavigateWithScrolls -bool FALSE
+
 # Kill iTunes Helper
 osascript -e 'tell application "System Events" to delete login item "iTunesHelper"'
 
