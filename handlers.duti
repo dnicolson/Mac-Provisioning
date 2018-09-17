@@ -48,8 +48,8 @@ com.sublimetext.3 .sh     all
 com.sublimetext.3 .fish   all
 com.sublimetext.3 .plist  all
 
-com.google.chrome http  all
-com.google.chrome https all
+com.google.chrome.canary http  all
+com.google.chrome.canary https all
 
 it.bloop.airmail2 mailto
 
@@ -74,4 +74,3 @@ cx.c3.theunarchiver .zip    all
 com.webinhq.ReadKit feed
 
 com.apple.iBooksX .epub all
-
