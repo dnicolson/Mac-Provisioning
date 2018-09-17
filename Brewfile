@@ -5,6 +5,7 @@ tap "homebrew/services"
 tap "homebrew/cask-versions"
 
 brew "atomicparsley"
+brew "bat"
 brew "certbot"
 brew "docker-compose"
 brew "dockutil"
@@ -12,6 +13,7 @@ brew "duti"
 brew "ffmpeg"
 brew "fish"
 brew "git"
+brew "go"
 brew "gti"
 brew "mackup"
 brew "mas"
@@ -19,15 +21,20 @@ brew "memcached", restart_service: true
 brew "mysql", restart_service: true
 brew "nvm"
 brew "php"
+brew "plex-media-server"
 brew "postgresql"
 brew "rbenv"
 brew "redis", restart_service: true
 brew "telnet"
 brew "tig"
+brew "tree"
+brew "watchman"
 brew "yarn", args: ["without-node"]
 
 cask "0xed"
+cask "1password"
 cask "alfred"
+cask "ankiapp"
 cask "apptrap"
 cask "bbedit"
 cask "betterzip"
@@ -65,7 +72,6 @@ cask "webpquicklook"
 cask "xld"
 cask "xquartz"
 
-mas "1Password", id: 443987910
 mas "Airmail 3", id: 918858936
 mas "Apple Configurator 2", id: 1037126344
 mas "Deliveries", id: 924726344
