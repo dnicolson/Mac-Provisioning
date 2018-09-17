@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+# SSH key
+ssh-keygen -t rsa
+echo "Please add this public key to GitHub"
+echo "https://github.com/account/ssh"
+
 # Xcode
 xcode-select --install
 
