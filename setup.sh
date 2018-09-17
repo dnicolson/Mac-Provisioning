@@ -16,6 +16,8 @@ export NVM_DIR="$HOME/.nvm"
 . "$(brew --prefix nvm)/nvm.sh"
 nvm install stable
 
+npm i -g jscs sass-lint
+
 # Install Ruby
 rbenv install `rbenv install -l | grep -v - | tail -1`
 
