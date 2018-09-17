@@ -82,3 +82,7 @@ killall Dock
 ./defaults.sh
 
 duti handlers.duti
+
+# Create locate database
+sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
+
