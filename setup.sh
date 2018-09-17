@@ -21,6 +21,8 @@ npm i -g jscs sass-lint
 # Install Ruby
 rbenv install `rbenv install -l | grep -v - | tail -1`
 
+gem install bundler dotenv pry sass scss_lint
+
 read -p "Setup Dropbox and press any key..."
 
 # Custom Casks
