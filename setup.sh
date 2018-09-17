@@ -23,6 +23,7 @@ rbenv install `rbenv install -l | grep -v - | tail -1`
 
 gem install bundler dotenv pry sass scss_lint
 
+# Wait for Dropbox
 read -p "Setup Dropbox and press any key..."
 
 # Custom Casks
