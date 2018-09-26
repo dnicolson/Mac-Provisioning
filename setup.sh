@@ -86,3 +86,5 @@ duti handlers.duti
 # Create locate database
 sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
 
+# Set default DNS
+networksetup -setdnsservers Wi-Fi 1.1.1.1 1.0.0.1 2606:4700:4700::1111 2606:4700:4700::1001
