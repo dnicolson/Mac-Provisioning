@@ -74,3 +74,6 @@ cx.c3.theunarchiver .zip    all
 com.webinhq.ReadKit feed
 
 com.apple.iBooksX .epub all
+
+com.github.marktext.marktext .md all
+
