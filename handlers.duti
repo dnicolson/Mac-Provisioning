@@ -10,7 +10,7 @@ com.sublimetext.3 .java   all
 com.sublimetext.3 .scss   all
 com.sublimetext.3 .css    all
 com.sublimetext.3 .sql    all
-com.sublimetext.3 .sqlite all
+com.tinyapp.TablePlus .sqlite all
 com.sublimetext.3 .mysql  all
 com.sublimetext.3 .txt    all
 com.sublimetext.3 .less   all
