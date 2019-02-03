@@ -19,16 +19,29 @@ fi
 # Install Brews, Casks and MAS apps
 brew bundle
 
-# Install Node
-export NVM_DIR="$HOME/.nvm"
-. "$(brew --prefix nvm)/nvm.sh"
-nvm install stable
-
-npm i -g jscs sass-lint
+# Setup asdf for extendable version management
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.6.3
 
 # Install Ruby
-rbenv install `rbenv install -l | grep -v - | tail -1`
+asdf plugin-add ruby
+asdf install ruby `asdf list-all ruby install -l | grep -v - | tail -1`
 
+# Install Node
+asdf plugin-add nodejs
+bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
+asdf install nodejs `asdf list-all nodejs install -l | grep -v - | tail -1`
+
+# Install Python
+export LDFLAGS="-L/usr/local/opt/zlib/lib"
+export CPPFLAGS="-I/usr/local/opt/zlib/include"
+export PKG_CONFIG_PATH="/usr/local/opt/zlib/lib/pkgconfig"
+export KEEP_BUILD_PATH=true
+asdf plugin-add python
+asdf install python 2.7.15
+asdf install python `asdf list-all python install -l | grep -v - | tail -1`
+
+# Install modules
+npm i -g jscs sass-lint
 gem install bundler dotenv pry sass scss_lint
 
 # Wait for Dropbox
