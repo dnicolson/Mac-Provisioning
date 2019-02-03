@@ -8,6 +8,9 @@ echo "https://github.com/account/ssh"
 # Xcode
 xcode-select --install
 
+# Wait for Xcode
+read -p "After Xcode is installed press any key..."
+
 # Homebrew
 if test ! $(which brew); then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
