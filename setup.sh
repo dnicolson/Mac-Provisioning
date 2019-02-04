@@ -22,14 +22,21 @@ brew bundle
 # Setup asdf for extendable version management
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.6.3
 
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
+
 # Install Ruby
 asdf plugin-add ruby
-asdf install ruby `asdf list-all ruby install -l | grep -v - | tail -1`
+RUBY_VERSION=`asdf list-all ruby install -l | grep -v - | tail -1`
+asdf install ruby $RUBY_VERSION
+asdf global ruby $RUBY_VERSION
 
 # Install Node
 asdf plugin-add nodejs
 bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
-asdf install nodejs `asdf list-all nodejs install -l | grep -v - | tail -1`
+NODE_VERSION=`asdf list-all nodejs install -l | grep -v - | tail -1`
+asdf install nodejs $NODE_VERSION
+asdf global nodejs $NODE_VERSION
 
 # Install Python
 export LDFLAGS="-L/usr/local/opt/zlib/lib"
@@ -38,7 +45,8 @@ export PKG_CONFIG_PATH="/usr/local/opt/zlib/lib/pkgconfig"
 export KEEP_BUILD_PATH=true
 asdf plugin-add python
 asdf install python 2.7.15
-asdf install python `asdf list-all python install -l | grep -v - | tail -1`
+asdf install python 3.6.8
+asdf global python 3.6.8 2.7.15
 
 # Install modules
 npm i -g jscs sass-lint
