@@ -30,6 +30,7 @@ asdf plugin-add ruby
 RUBY_VERSION=`asdf list-all ruby install -l | grep -v - | tail -1`
 asdf install ruby $RUBY_VERSION
 asdf global ruby $RUBY_VERSION
+gem install bundler dotenv pry sass scss_lint
 
 # Install Node
 asdf plugin-add nodejs
@@ -37,6 +38,7 @@ bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
 NODE_VERSION=`asdf list-all nodejs install -l | grep -v - | tail -1`
 asdf install nodejs $NODE_VERSION
 asdf global nodejs $NODE_VERSION
+npm i -g jscs sass-lint
 
 # Install Python
 export LDFLAGS="-L/usr/local/opt/zlib/lib"
@@ -47,10 +49,8 @@ asdf plugin-add python
 asdf install python 2.7.15
 asdf install python 3.6.8
 asdf global python 3.6.8 2.7.15
-
-# Install modules
-npm i -g jscs sass-lint
-gem install bundler dotenv pry sass scss_lint
+pip install pylint pyatv
+asdf reshim python
 
 # Wait for Dropbox
 read -p "Setup Dropbox and press any key..."
