@@ -38,7 +38,7 @@ bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
 NODE_VERSION=`asdf list-all nodejs install -l | grep -v - | tail -1`
 asdf install nodejs $NODE_VERSION
 asdf global nodejs $NODE_VERSION
-npm i -g jscs sass-lint
+npm i -g jscs prettier sass-lint
 
 # Install Python
 export LDFLAGS="-L/usr/local/opt/zlib/lib"
