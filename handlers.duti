@@ -11,6 +11,7 @@ com.sublimetext.3 .scss   all
 com.sublimetext.3 .css    all
 com.sublimetext.3 .sql    all
 com.tinyapp.TablePlus .sqlite all
+com.tinyapp.TablePlus .sqlitedb all
 com.sublimetext.3 .mysql  all
 com.sublimetext.3 .txt    all
 com.sublimetext.3 .less   all
@@ -77,5 +78,5 @@ com.apple.iBooksX .epub all
 
 com.github.marktext.marktext .md all
 
-com.kodlian.Icon-Slate .ico all
-
+com.kodlian.Icon-Slate .ico  all
+com.kodlian.Icon-Slate .icns all
