@@ -19,11 +19,7 @@ fi
 # Install Brews, Casks and MAS apps
 brew bundle
 
-# Setup asdf for extendable version management
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.6.3
-
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
+source /usr/local/opt/asdf/asdf.fish
 
 # Install Ruby
 asdf plugin-add ruby
@@ -34,7 +30,7 @@ gem install bundler dotenv pry sass scss_lint
 
 # Install Node
 asdf plugin-add nodejs
-bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
+bash /usr/local/opt/asdf/plugins/nodejs/bin/import-release-team-keyring
 NODE_VERSION=`asdf list-all nodejs install -l | grep -v - | tail -1`
 asdf install nodejs $NODE_VERSION
 asdf global nodejs $NODE_VERSION

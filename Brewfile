@@ -5,6 +5,7 @@ tap "homebrew/services"
 tap "homebrew/cask-versions"
 
 brew "atomicparsley"
+brew "asdf"
 brew "bat"
 brew "certbot"
 brew "coreutils"
