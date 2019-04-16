@@ -25,6 +25,7 @@ brew "mysql", restart_service: true
 brew "php"
 brew "postgresql"
 brew "redis", restart_service: true
+brew "ripgrep"
 brew "telnet"
 brew "tig"
 brew "tree"
