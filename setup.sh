@@ -53,7 +53,7 @@ read -p "Setup Dropbox and press any key..."
 
 # Custom Casks
 brew cask install ~/Dropbox/Code/Provisioning/phoneview.rb
-brew cask install ~/Dropbox/Code/Provisioning/pixelsnap.rb
+brew cask install ~/Dropbox/Code/Provisioning/pixelsnap2.rb
 brew cask install ~/Dropbox/Code/Provisioning/airbuddy.rb
 
 # Allow ~/Dropbox/Apps path for Alfred preferences
