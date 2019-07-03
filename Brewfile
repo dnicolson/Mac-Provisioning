@@ -1,14 +1,17 @@
 tap "homebrew/bundle"
 tap "homebrew/cask"
+tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
-tap "homebrew/cask-versions"
-
-brew "atomicparsley"
+tap "jesseduffield/lazydocker"
+tap "potatolabs/git-redate"
 brew "asdf"
+brew "atomicparsley"
 brew "bat"
+brew "bluetoothkeyboardenhancer", restart_service: true
 brew "certbot"
 brew "coreutils"
+brew "docker"
 brew "docker-compose"
 brew "dockutil"
 brew "duti"
@@ -18,21 +21,28 @@ brew "git"
 brew "gnupg"
 brew "go"
 brew "gti"
+brew "usbmuxd", args: ["HEAD"]
+brew "libimobiledevice", args: ["HEAD"]
+brew "ifuse"
 brew "mackup"
 brew "mas"
-brew "memcached", restart_service: true
-brew "mysql", restart_service: true
 brew "php"
+brew "memcached"
+brew "mysql"
 brew "postgresql"
-brew "redis", restart_service: true
 brew "ripgrep"
+brew "redis"
 brew "telnet"
 brew "tig"
 brew "tree"
 brew "watchman"
 brew "yarn", args: ["without-node"]
+brew "wget"
+brew "youtube-dl"
 brew "zlib"
-
+brew "zsh"
+brew "jesseduffield/lazydocker/lazydocker"
+brew "potatolabs/git-redate/git-redate"
 cask "0xed"
 cask "1password"
 cask "alfred"
@@ -42,12 +52,14 @@ cask "aerial"
 cask "bitbar"
 cask "bbedit"
 cask "betterzip"
+cask "cakebrew"
 cask "docker"
 cask "dropbox"
 cask "firefox"
 cask "go2shell"
 cask "google-chrome"
 cask "google-chrome-canary"
+cask "hyper"
 cask "ios-console"
 cask "iterm2"
 cask "itsycal"
@@ -55,7 +67,9 @@ cask "macmediakeyforwarder"
 cask "mark-text"
 cask "openemu"
 cask "paragon-ntfs"
+cask "plex-media-server"
 cask "qlcolorcode"
+cask "qlimagesize"
 cask "qlmarkdown"
 cask "qlstephen"
 cask "qlvideo"
@@ -69,6 +83,7 @@ cask "sublime-text"
 cask "suspicious-package"
 cask "tableplus"
 cask "tower2"
+cask "transmit4"
 cask "tunnelblick"
 cask "ubersicht"
 cask "visual-studio-code"
@@ -76,8 +91,7 @@ cask "vlc"
 cask "webpquicklook"
 cask "xld"
 cask "xquartz"
-
-mas "Airmail 3", id: 918858936
+mas "Airmail", id: 918858936
 mas "Apple Configurator 2", id: 1037126344
 mas "Deliveries", id: 924726344
 mas "Download Buddy", id: 802165887
@@ -90,3 +104,4 @@ mas "Slack", id: 803453959
 mas "The Unarchiver", id: 425424353
 mas "ToothFairy", id: 1191449274
 mas "Wunderlist", id: 410628904
+mas "Xcode", id: 497799835
