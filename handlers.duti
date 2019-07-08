@@ -57,6 +57,7 @@ it.bloop.airmail2 mailto
 org.videolan.vlc .mp4 all
 org.videolan.vlc .mkv all
 org.videolan.vlc .avi all
+jp.tmkk.XLD .flac all
 
 cx.c3.theunarchiver .7z     all
 cx.c3.theunarchiver .cab    all
