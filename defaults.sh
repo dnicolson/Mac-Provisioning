@@ -29,3 +29,6 @@ osascript -e 'tell application "System Events" to make login item at end with pr
 # Script Editor
 defaults write com.apple.ScriptEditor2 ApplePersistence -bool FALSE
 defaults write com.apple.ScriptEditor2 DefaultLanguageType -int 1785946994
+
+# Hide welcome window
+defaults write com.apple.dt.Xcode XCShowWelcomeWindow 0
