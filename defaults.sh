@@ -37,3 +37,4 @@ defaults write com.apple.Music dontAskDownloadArtwork 1
 defaults write com.apple.Music dontAskForPlaylistItemRemoval 1
 defaults write com.apple.Music dontAskForPlaylistRemoval 1
 defaults write com.apple.Music dontWarnWhenEditingMultiple 1
+defaults write com.apple.Music automaticallyDownloadArtwork 1
