@@ -64,7 +64,7 @@ chsh -s /usr/local/bin/fish
 fish -c fisher
 
 # Allow ~/Dropbox/Apps path for Alfred preferences
-defaults write com.runningwithcrayons.Alfred-Preferences-3 dropbox.allowappsfolder -bool TRUE
+defaults write com.runningwithcrayons.Alfred-Preferences dropbox.allowappsfolder -bool TRUE
 
 # Restart QuickLook
 qlmanage -r
