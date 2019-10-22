@@ -8,18 +8,23 @@ echo "https://github.com/account/ssh"
 # Xcode
 xcode-select --install
 
-# Wait for Xcode
-read -p "After Xcode is installed press any key..."
-
 # Homebrew
 if test ! $(which brew); then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
 # Install Brews, Casks and MAS apps
+brew cask install osxfuse
 brew bundle
 
-source /usr/local/opt/asdf/asdf.fish
+# Wait for Dropbox
+read -p "Setup Dropbox and press any key..."
+
+# Symlink application settings from Dropbox
+mackup restore
+
+# Setup version manager
+source /usr/local/opt/asdf/asdf.sh
 
 # Install Ruby
 asdf plugin-add ruby
@@ -48,24 +53,18 @@ asdf global python 3.6.8 2.7.15
 pip install pylint pyatv
 asdf reshim python
 
-# Wait for Dropbox
-read -p "Setup Dropbox and press any key..."
-
 # Custom Casks
 brew cask install ~/Dropbox/Code/Provisioning/phoneview.rb
 brew cask install ~/Dropbox/Code/Provisioning/pixelsnap2.rb
 brew cask install ~/Dropbox/Code/Provisioning/airbuddy.rb
 
-# Allow ~/Dropbox/Apps path for Alfred preferences
-defaults write com.runningwithcrayons.Alfred-Preferences-3 dropbox.allowappsfolder -bool TRUE
-
-# Symlink application settings from Dropbox
-mackup restore
-
 # fish shell
 echo /usr/local/bin/fish | sudo tee -a /etc/shells
 chsh -s /usr/local/bin/fish
 fish -c fisher
+
+# Allow ~/Dropbox/Apps path for Alfred preferences
+defaults write com.runningwithcrayons.Alfred-Preferences-3 dropbox.allowappsfolder -bool TRUE
 
 # Restart QuickLook
 qlmanage -r
