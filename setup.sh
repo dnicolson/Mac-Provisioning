@@ -74,15 +74,15 @@ chflags nohidden ~/Library/
 
 # Customise Dock
 dockutil --no-restart --remove all
-dockutil --no-restart --add "/Applications/System Preferences.app"
-dockutil --no-restart --add "/Applications/iTunes.app"
-dockutil --no-restart --add "/Applications/Messages.app"
+dockutil --no-restart --add "/System/Applications/System Preferences.app"
+dockutil --no-restart --add "/System/Applications/Music.app"
+dockutil --no-restart --add "/System/Applications/Messages.app"
 dockutil --no-restart --add "/Applications/Airmail 3.app"
 dockutil --no-restart --add "/Applications/VLC.app"
-dockutil --no-restart --add "/Applications/Photos.app"
+dockutil --no-restart --add "/System/Applications/Photos.app"
 dockutil --no-restart --add "/Applications/ReadKit.app"
 dockutil --no-restart --add "/Applications/Wunderlist.app"
-dockutil --no-restart --add "/Applications/Notes.app"
+dockutil --no-restart --add "/System/Applications/Notes.app"
 dockutil --no-restart --add "/Applications/1Password 7.app"
 dockutil --no-restart --add "/Applications/Outbank.app"
 dockutil --no-restart --add "/Applications/Google Chrome.app"
@@ -94,8 +94,8 @@ dockutil --no-restart --add "/Applications/Visual Studio Code.app"
 dockutil --no-restart --add "/Applications/RunJS.app"
 dockutil --no-restart --add "/Applications/Sequel Pro.app"
 dockutil --no-restart --add "/Applications/0xED.app"
-dockutil --no-restart --add "/Applications/Utilities/Console.app"
-dockutil --no-restart --add "/Applications/Utilities/Activity Monitor.app"
+dockutil --no-restart --add "/System/Applications/Utilities/Console.app"
+dockutil --no-restart --add "/System/Applications/Utilities/Activity Monitor.app"
 dockutil --no-restart --add "/Applications/iTerm.app"
 
 killall Dock
