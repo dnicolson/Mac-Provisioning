@@ -15,8 +15,19 @@ defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool FALSE
 defaults write com.google.Chrome.canary AppleEnableSwipeNavigateWithScrolls -bool FALSE
 
-# Kill iTunes Helper
-osascript -e 'tell application "System Events" to delete login item "iTunesHelper"'
+# Always show scrollbars
+defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
+
+# Disable the warning when changing a file extension
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+
+# Trackpad: enable tap to click for this user and for the login screen
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+
+# Show item info below icons on the desktop and in other icon views
+/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist
 
 # Add login items
 osascript -e 'tell application "System Events" to make login item at end with properties {name: "Alfred 4", path: "/Applications/Alfred 4.app"}'
