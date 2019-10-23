@@ -41,7 +41,6 @@ brew "telnet"
 brew "tig"
 brew "tree"
 brew "watchman"
-brew "yarn", args: ["without-node"]
 brew "wget"
 brew "youtube-dl"
 brew "zlib"
