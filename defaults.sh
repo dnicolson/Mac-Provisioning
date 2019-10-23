@@ -29,13 +29,6 @@ defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 # Show item info below icons on the desktop and in other icon views
 /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist
 
-# Add login items
-osascript -e 'tell application "System Events" to make login item at end with properties {name: "Alfred 4", path: "/Applications/Alfred 4.app"}'
-osascript -e 'tell application "System Events" to make login item at end with properties {name: "Itsycal", path: "/Applications/Itsycal.app"}'
-osascript -e 'tell application "System Events" to make login item at end with properties {name: "MacMediaKeyForwarder", path: "/Applications/MacMediaKeyForwarder.app"}'
-osascript -e 'tell application "System Events" to make login item at end with properties {name: "PixelSnap 2", path: "/Applications/PixelSnap 2.app"}'
-osascript -e 'tell application "System Events" to make login item at end with properties {name: "Rocket", path: "/Applications/Rocket.app"}'
-
 # Script Editor
 defaults write com.apple.ScriptEditor2 ApplePersistence -bool FALSE
 defaults write com.apple.ScriptEditor2 DefaultLanguageType -int 1785946994
@@ -49,3 +42,19 @@ defaults write com.apple.Music dontAskForPlaylistItemRemoval 1
 defaults write com.apple.Music dontAskForPlaylistRemoval 1
 defaults write com.apple.Music dontWarnWhenEditingMultiple 1
 defaults write com.apple.Music automaticallyDownloadArtwork 1
+
+# Menu extras
+defaults write com.apple.systemuiserver menuExtras -array 
+"/System/Library/CoreServices/Menu Extras/Clock.menu"
+"/System/Library/CoreServices/Menu Extras/Battery.menu"
+"/System/Library/CoreServices/Menu Extras/AirPort.menu"
+"/System/Library/CoreServices/Menu Extras/Bluetooth.menu"
+
+killall SystemUIServer
+
+# Add login items
+osascript -e 'tell application "System Events" to make login item at end with properties {name: "Alfred 4", path: "/Applications/Alfred 4.app"}'
+osascript -e 'tell application "System Events" to make login item at end with properties {name: "Itsycal", path: "/Applications/Itsycal.app"}'
+osascript -e 'tell application "System Events" to make login item at end with properties {name: "MacMediaKeyForwarder", path: "/Applications/MacMediaKeyForwarder.app"}'
+osascript -e 'tell application "System Events" to make login item at end with properties {name: "PixelSnap 2", path: "/Applications/PixelSnap 2.app"}'
+osascript -e 'tell application "System Events" to make login item at end with properties {name: "Rocket", path: "/Applications/Rocket.app"}'
