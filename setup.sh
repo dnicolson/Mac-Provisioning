@@ -47,9 +47,11 @@ export CPPFLAGS="-I/usr/local/opt/zlib/include"
 export PKG_CONFIG_PATH="/usr/local/opt/zlib/lib/pkgconfig"
 export KEEP_BUILD_PATH=true
 asdf plugin-add python
-asdf install python 2.7.15
-asdf install python 3.6.8
-asdf global python 3.6.8 2.7.15
+PYTHON2_VERSION=`asdf list-all python install -l | grep -v - | grep '^2' | tail -1`
+PYTHON3_VERSION=`asdf list-all python install -l | grep -v - | grep '^3' | tail -1`
+asdf install python $PYTHON2_VERSION
+asdf install python $PYTHON3_VERSION
+asdf global python $PYTHON3_VERSION $PYTHON2_VERSION
 pip install pylint pyatv
 asdf reshim python
 
