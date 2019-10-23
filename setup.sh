@@ -35,7 +35,7 @@ gem install bundler dotenv pry sass scss_lint
 
 # Install Node
 asdf plugin-add nodejs
-bash /usr/local/opt/asdf/plugins/nodejs/bin/import-release-team-keyring
+bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
 NODE_VERSION=`asdf list-all nodejs install -l | grep -v - | tail -1`
 asdf install nodejs $NODE_VERSION
 asdf global nodejs $NODE_VERSION
