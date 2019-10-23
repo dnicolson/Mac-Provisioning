@@ -31,7 +31,6 @@ asdf plugin-add ruby
 RUBY_VERSION=`asdf list-all ruby install -l | grep -v - | tail -1`
 asdf install ruby $RUBY_VERSION
 asdf global ruby $RUBY_VERSION
-gem install bundler dotenv pry sass scss_lint
 
 # Install Node
 asdf plugin-add nodejs
@@ -39,7 +38,6 @@ bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
 NODE_VERSION=`asdf list-all nodejs install -l | grep -v - | tail -1`
 asdf install nodejs $NODE_VERSION
 asdf global nodejs $NODE_VERSION
-npm i -g prettier sass-lint eslint eslint-config-standard eslint-plugin-import eslint-plugin-node eslint-plugin-promise eslint-plugin-standard eslint-config-prettier eslint-plugin-prettier
 
 # Install Python
 export LDFLAGS="-L/usr/local/opt/zlib/lib"
@@ -52,8 +50,12 @@ PYTHON3_VERSION=`asdf list-all python install -l | grep -v - | grep '^3' | tail 
 asdf install python $PYTHON2_VERSION
 asdf install python $PYTHON3_VERSION
 asdf global python $PYTHON3_VERSION $PYTHON2_VERSION
-pip install pylint pyatv
 asdf reshim python
+
+# Install gems and packages
+gem install bundler dotenv pry sass scss_lint
+npm i -g prettier sass-lint eslint eslint-config-standard eslint-plugin-import eslint-plugin-node eslint-plugin-promise eslint-plugin-standard eslint-config-prettier eslint-plugin-prettier
+pip install pylint pyatv
 
 # Custom Casks
 brew cask install ~/Dropbox/Code/Provisioning/phoneview.rb
