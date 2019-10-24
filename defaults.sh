@@ -44,12 +44,11 @@ defaults write com.apple.Music dontWarnWhenEditingMultiple 1
 defaults write com.apple.Music automaticallyDownloadArtwork 1
 
 # Menu extras
-defaults write com.apple.systemuiserver menuExtras -array 
+defaults write com.apple.systemuiserver menuExtras -array
 "/System/Library/CoreServices/Menu Extras/Clock.menu"
 "/System/Library/CoreServices/Menu Extras/Battery.menu"
 "/System/Library/CoreServices/Menu Extras/AirPort.menu"
 "/System/Library/CoreServices/Menu Extras/Bluetooth.menu"
-
 killall SystemUIServer
 
 # Add login items
