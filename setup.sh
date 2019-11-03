@@ -105,7 +105,11 @@ dockutil --no-restart --add "/Applications/iTerm.app"
 
 killall Dock
 
+# Defaults
 ./defaults.sh
+
+# Add Go2Shell to Finder
+./finder.sh
 
 duti handlers.duti
 
