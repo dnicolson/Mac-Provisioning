@@ -78,7 +78,6 @@ cask "qlcolorcode"
 cask "qlimagesize"
 cask "qlmarkdown"
 cask "qlstephen"
-cask "qlvideo"
 cask "quicklook-json"
 cask "quicklookase"
 cask "rcdefaultapp"
@@ -97,7 +96,6 @@ cask "visual-studio-code"
 cask "vlc"
 cask "webpquicklook"
 cask "xld"
-cask "xquartz"
 mas "Airmail", id: 918858936
 mas "Apple Configurator 2", id: 1037126344
 mas "Deliveries", id: 924726344

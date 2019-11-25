@@ -16,7 +16,7 @@ fi
 # Install Brews, Casks and MAS apps
 brew cask install osxfuse
 brew bundle
-brew cask install docker paragon-ntfs virtualbox
+brew cask install docker paragon-ntfs virtualbox qlvideo xquartz
 
 # Wait for Dropbox
 read -p "Setup Dropbox and press any key..."
