@@ -6,7 +6,7 @@ APP=/Applications/Go2Shell.app/Contents/MacOS/Go2ShellHelper.app/
 POSITION=8
 
 /usr/libexec/PlistBuddy -c "Delete 'NSToolbar Configuration Browser:TB Item Identifiers'" $PLIST
-/usr/libexec/PlistBuddy -c "Delete 'NSToolbar Configuration Browser:TB Item Plists'" $PLIST
+/usr/libexec/PlistBuddy -c "Delete 'NSToolbar Configuration Browser:TB Item Plists'" $PLIST 2>/dev/null
 
 /usr/libexec/PlistBuddy -c "Add 'NSToolbar Configuration Browser:TB Item Identifiers' array" $PLIST
 i=1
