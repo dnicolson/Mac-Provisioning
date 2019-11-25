@@ -22,6 +22,7 @@ defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
 # New window location
+defaults write com.apple.finder NewWindowTarget -string "PfHm"
 defaults write com.apple.finder NewWindowTargetPath -string "file://$(cd ~; pwd)/"
 
 # Trackpad: enable tap to click for this user and for the login screen
