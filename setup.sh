@@ -70,6 +70,7 @@ fish -c fisher
 
 # Allow ~/Dropbox/Apps path for Alfred preferences
 defaults write com.runningwithcrayons.Alfred-Preferences dropbox.allowappsfolder -bool TRUE
+defaults write com.runningwithcrayons.Alfred-Preferences syncfolder -string "~/Dropbox/Apps"
 
 # Restart QuickLook
 qlmanage -r
