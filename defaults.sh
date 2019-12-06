@@ -1,19 +1,19 @@
 #!/usr/bin/env bash
 
 # Use scroll gesture with the Ctrl (^) modifier key to zoom
-defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool TRUE
+defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
 defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
 
 # Disable the “are you sure you want to open this application?” dialog
-defaults write com.apple.LaunchServices LSQuarantine -bool FALSE
+defaults write com.apple.LaunchServices LSQuarantine -bool false
 
 # Use list view in all Finder windows by default
 # Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
 defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 
 # Disable swipe navigation in Chrome
-defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool FALSE
-defaults write com.google.Chrome.canary AppleEnableSwipeNavigateWithScrolls -bool FALSE
+defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
+defaults write com.google.Chrome.canary AppleEnableSwipeNavigateWithScrolls -bool false
 
 # Always show scrollbars
 defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
@@ -39,7 +39,7 @@ defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
 
 # Script Editor
-defaults write com.apple.ScriptEditor2 ApplePersistence -bool FALSE
+defaults write com.apple.ScriptEditor2 ApplePersistence -bool false
 defaults write com.apple.ScriptEditor2 DefaultLanguageType -int 1785946994
 
 # Hide welcome window
