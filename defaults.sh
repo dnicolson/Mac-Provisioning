@@ -55,6 +55,9 @@ defaults write com.apple.Music automaticallyDownloadArtwork 1
 # Hide language menu
 defaults write com.apple.TextInputMenu visible -bool false
 
+# Feedback Assistant
+defaults write com.apple.appleseed.FeedbackAssistant.plist FBASuppressPrivacyNotice -bool true
+
 # Menu extras
 defaults write com.apple.systemuiserver menuExtras -array \
   "/System/Library/CoreServices/Menu Extras/Clock.menu" \
