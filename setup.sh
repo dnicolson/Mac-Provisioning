@@ -18,6 +18,9 @@ brew cask install osxfuse
 brew bundle
 brew cask install docker paragon-ntfs virtualbox qlvideo xquartz
 
+# Remove quarantine
+xattr -r -d com.apple.quarantine ~/Library/QuickLook
+
 # Wait for Dropbox
 read -p "Setup Dropbox and press any key..."
 
