@@ -89,8 +89,7 @@ menu.click()
 menu.menus[0].menuItems['Preferences...'].click()
 
 dropbox.windows[0].toolbars[0].buttons['Import'].click()
-const indexes = [1,2]
-indexes.forEach(index => {
+Array(1,2).forEach(index => {
   let checkbox = dropbox.windows[0].groups[index].checkboxes[0]
   checkbox.value() && checkbox.click()
 })
