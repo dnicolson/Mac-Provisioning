@@ -58,6 +58,11 @@ defaults write com.apple.TextInputMenu visible -bool false
 # Feedback Assistant
 defaults write com.apple.appleseed.FeedbackAssistant.plist FBASuppressPrivacyNotice -bool true
 
+# Set languages and dot-based number separators
+defaults write .GlobalPreferences AppleLanguages -array "en-AU" "de-DE"
+defaults write .GlobalPreferences AppleLocale -string "en_DE"
+defaults write .GlobalPreferences AppleICUNumberSymbols -dict 0 '.' 1 ',' 10 '.' 17 ','
+
 # Menu extras
 defaults write com.apple.systemuiserver menuExtras -array \
   "/System/Library/CoreServices/Menu Extras/Clock.menu" \
