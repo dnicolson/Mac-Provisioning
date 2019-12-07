@@ -80,3 +80,21 @@ osascript -e 'tell application "System Events" to make login item at end with pr
 
 # Screen Saver
 defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName Aerial path ~/Library/Screen\ Savers/Aerial.saver type 0
+
+# Dropbox
+osascript <<'END'
+tell application "System Events" to tell process "Dropbox"
+	tell menu bar item 1 of menu bar 2
+		click
+		click menu item "Preferences..." of menu 1
+	end tell
+	click button "Import" of toolbar 1 of window 1
+
+	repeat with index in {2, 3}
+		set theCheckbox to checkbox 1 of group index of window 1
+		tell theCheckbox
+			if (its value as boolean) then click theCheckbox
+		end tell
+	end repeat
+end tell
+END
