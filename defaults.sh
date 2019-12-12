@@ -52,6 +52,9 @@ defaults write com.apple.Music dontAskForPlaylistRemoval 1
 defaults write com.apple.Music dontWarnWhenEditingMultiple 1
 defaults write com.apple.Music automaticallyDownloadArtwork 1
 
+# Safari
+defaults write com.apple.Safari IncludeInternalDebugMenu 1
+
 # Hide language menu
 defaults write com.apple.TextInputMenu visible -bool false
 
