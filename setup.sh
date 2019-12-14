@@ -117,8 +117,9 @@ killall Dock
 ./defaults.sh
 
 # Add Go2Shell to Finder
-./finder.sh
+./defaults/finder.sh
 
+# Set default file handlers
 duti handlers.duti
 
 # Create locate database
