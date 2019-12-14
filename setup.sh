@@ -80,7 +80,10 @@ defaults write com.runningwithcrayons.Alfred-Preferences syncfolder -string "~/D
 qlmanage -r
 
 # Show ~/Library folder
-chflags nohidden ~/Library/
+chflags nohidden ~/Library
+
+# Hide ~/Applications folder
+chflags hidden ~/Applications
 
 # Customise Dock
 dockutil --no-restart --remove all
