@@ -119,6 +119,9 @@ killall Dock
 # Add Go2Shell to Finder
 ./defaults/finder.sh
 
+# Set Dropbox defaults
+./defaults/dropbox.sh
+
 # Set default file handlers
 duti handlers.duti
 

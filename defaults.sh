@@ -83,19 +83,3 @@ osascript -e 'tell application "System Events" to make login item at end with pr
 
 # Screen Saver
 defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName Aerial path ~/Library/Screen\ Savers/Aerial.saver type 0
-
-# Dropbox
-osascript -l JavaScript <<END
-const dropbox = Application('System Events').processes['Dropbox']
-const menu = dropbox.menuBars[1].menuBarItems[0]
-menu.click()
-menu.menus[0].menuItems['Preferences...'].click()
-
-dropbox.windows[0].toolbars[0].buttons['Import'].click()
-Array(1,2).forEach(index => {
-  let checkbox = dropbox.windows[0].groups[index].checkboxes[0]
-  checkbox.value() && checkbox.click()
-})
-
-dropbox.windows[0].buttons[1].click()
-END
