@@ -107,7 +107,7 @@ mas "Mate Translate", id: 1005088137
 mas "Outbank", id: 1094255754
 mas "ReadKit", id: 588726889
 mas "Slack", id: 803453959
+mas "TickTick", id: 966085870
 mas "The Unarchiver", id: 425424353
 mas "ToothFairy", id: 1191449274
-mas "Wunderlist", id: 410628904
 mas "Xcode", id: 497799835
