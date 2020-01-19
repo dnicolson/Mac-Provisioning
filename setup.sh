@@ -121,9 +121,8 @@ killall Dock
 # Set Dropbox defaults
 ./defaults/dropbox.sh
 
-# Set Chrome defaults
-read -p "Setup Chrome and close application..."
-./defaults/chrome.sh
+# Other defaults
+./defaults/other.sh
 
 # Set default file handlers
 duti handlers.duti
