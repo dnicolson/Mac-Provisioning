@@ -88,7 +88,7 @@ chflags hidden ~/Applications
 # Customise Dock
 dockutil --no-restart --remove all
 dockutil --no-restart --add "/System/Applications/System Preferences.app"
-dockutil --no-restart --add "/System/Applications/Music.app"
+dockutil --no-restart --add "/System/Applications/iTunes.app"
 dockutil --no-restart --add "/System/Applications/Messages.app"
 dockutil --no-restart --add "/Applications/Airmail.app"
 dockutil --no-restart --add "/Applications/VLC.app"
