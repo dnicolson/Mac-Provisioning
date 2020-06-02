@@ -33,16 +33,20 @@ source /usr/local/opt/asdf/asdf.sh
 
 # Install Ruby
 asdf plugin-add ruby
-RUBY_VERSION=`asdf list-all ruby install -l | grep -v [a-z] | tail -1`
+RUBY_VERSION=`asdf list-all ruby | grep -v [a-z] | tail -1`
 asdf install ruby $RUBY_VERSION
 asdf global ruby $RUBY_VERSION
 
 # Install Node
 asdf plugin-add nodejs
 bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
-NODE8_VERSION=`asdf list-all nodejs install -l | grep -v [a-z] | grep '^8' | tail -1`
-NODE_VERSION=`asdf list-all nodejs install -l | grep -v [a-z] | tail -1`
+NODE8_VERSION=`asdf list-all nodejs | grep -v [a-z] | grep '^8' | tail -1`
+NODE10_VERSION=`asdf list-all nodejs | grep -v [a-z] | grep '^10' | tail -1`
+NODE12_VERSION=`asdf list-all nodejs | grep -v [a-z] | grep '^12' | tail -1`
+NODE_VERSION=`asdf list-all nodejs | grep -v [a-z] | tail -1`
 asdf install nodejs $NODE8_VERSION
+asdf install nodejs $NODE10_VERSION
+asdf install nodejs $NODE12_VERSION
 asdf install nodejs $NODE_VERSION
 asdf global nodejs $NODE_VERSION
 
@@ -52,12 +56,11 @@ export CPPFLAGS="-I/usr/local/opt/zlib/include"
 export PKG_CONFIG_PATH="/usr/local/opt/zlib/lib/pkgconfig"
 export KEEP_BUILD_PATH=true
 asdf plugin-add python
-PYTHON2_VERSION=`asdf list-all python install -l | grep -v [a-z] | grep '^2' | tail -1`
-PYTHON3_VERSION=`asdf list-all python install -l | grep -v [a-z] | grep '^3' | tail -1`
+PYTHON2_VERSION=`asdf list-all python | grep -v [a-z] | grep '^2' | tail -1`
+PYTHON3_VERSION=`asdf list-all python | grep -v [a-z] | grep '^3' | tail -1`
 asdf install python $PYTHON2_VERSION
 asdf install python $PYTHON3_VERSION
 asdf global python $PYTHON3_VERSION $PYTHON2_VERSION
-asdf reshim python
 
 # Install gems and packages
 gem install bundler dotenv pry sass scss_lint
