@@ -84,7 +84,7 @@ killall SystemUIServer
 # Add login items
 osascript -e 'tell application "System Events" to make login item at end with properties {name: "Alfred 4", path: "/Applications/Alfred 4.app"}'
 osascript -e 'tell application "System Events" to make login item at end with properties {name: "Itsycal", path: "/Applications/Itsycal.app"}'
-osascript -e 'tell application "System Events" to make login item at end with properties {name: "MacMediaKeyForwarder", path: "/Applications/MacMediaKeyForwarder.app"}'
+osascript -e 'tell application "System Events" to make login item at end with properties {name: "BeardedSpice", path: "/Applications/BeardedSpice.app"}'
 osascript -e 'tell application "System Events" to make login item at end with properties {name: "PixelSnap 2", path: "/Applications/PixelSnap 2.app"}'
 osascript -e 'tell application "System Events" to make login item at end with properties {name: "Rocket", path: "/Applications/Rocket.app"}'
 
