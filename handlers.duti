@@ -52,7 +52,7 @@ com.microsoft.VSCode .plist  all
 com.google.chrome.canary http  all
 com.google.chrome.canary https all
 
-it.bloop.airmail2 mailto
+com.mimestream.Mimestream mailto
 
 org.videolan.vlc .mp4 all
 org.videolan.vlc .mkv all
