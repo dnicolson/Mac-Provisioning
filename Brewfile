@@ -88,7 +88,6 @@ cask "sublime-text"
 cask "suspicious-package"
 cask "swiftdefaultappsprefpane"
 cask "tableplus"
-cask "tower2"
 cask "transmit4"
 cask "typora"
 cask "ubersicht"
@@ -100,6 +99,7 @@ mas "Airmail", id: 918858936
 mas "Apple Configurator 2", id: 1037126344
 mas "Deliveries", id: 924726344
 mas "Download Buddy", id: 802165887
+mas "Gitfox", id: 1475511261
 mas "Icon Slate", id: 439697913
 mas "Key Codes", id: 414568915
 mas "Magnet", id: 441258766
