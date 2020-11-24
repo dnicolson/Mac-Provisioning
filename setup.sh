@@ -91,9 +91,6 @@ qlmanage -r
 # Show ~/Library folder
 chflags nohidden ~/Library
 
-# Hide ~/Applications folder
-chflags hidden ~/Applications
-
 # Customise Dock
 dockutil --no-restart --remove all
 dockutil --no-restart --add "/System/Applications/System Preferences.app"
