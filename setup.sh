@@ -95,7 +95,7 @@ dockutil --no-restart --remove all
 dockutil --no-restart --add "/System/Applications/System Preferences.app"
 dockutil --no-restart --add "/System/Applications/iTunes.app"
 dockutil --no-restart --add "/System/Applications/Messages.app"
-dockutil --no-restart --add "/Applications/Airmail.app"
+dockutil --no-restart --add "/Applications/Mimestream.app"
 dockutil --no-restart --add "/Applications/VLC.app"
 dockutil --no-restart --add "/System/Applications/Photos.app"
 dockutil --no-restart --add "/Applications/ReadKit.app"
