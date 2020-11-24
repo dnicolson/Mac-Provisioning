@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
 cd /tmp
-git clone git@github.com:dnicolson/dbx-keygen-macos.git
+git clone https://github.com/dnicolson/dbx-keygen-macos.git
 cd dbx-keygen-macos
 pip2 install crypto pycrypto simplejson pbkdf2
 KEY=`python2 dbx-keygen-macos.py | tr '\n' '\r' | sed -e 's/.*Database key:  \(.*\)./\1/g'`
 
 cd ..
-git clone git@github.com:dnicolson/sqlite3-dbx.git
+git clone https://github.com/dnicolson/sqlite3-dbx.git
 cd sqlite3-dbx
 gcc -o sqlite3 -I. -DSQLITE_HAS_CODEC -DHAVE_READLINE shell.c sqlite3.c -Wall -ggdb -ldl -lpthread -lreadline -lncurses
 
