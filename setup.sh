@@ -20,7 +20,7 @@ read -p "Log in to the App Store and press any key..."
 # Install Brews, Casks and MAS apps
 brew cask install osxfuse
 brew bundle
-brew cask install docker paragon-ntfs virtualbox qlvideo xquartz
+brew cask install docker vmware-fusion paragon-ntfs qlvideo xquartz
 
 # Remove quarantine
 xattr -r -d com.apple.quarantine /Applications 2> /dev/null
