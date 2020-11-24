@@ -3,7 +3,7 @@
 # Chrome
 open -a "Google Chrome"
 read -p "Setup Chrome and close application..."
-./other/chrome.sh
+./defaults/other/chrome.sh
 
 # TickTick
 open -a "TickTick"

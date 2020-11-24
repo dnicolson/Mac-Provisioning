@@ -25,6 +25,7 @@ brew "gti"
 brew "usbmuxd", args: ["HEAD"]
 brew "libimobiledevice", args: ["HEAD"]
 brew "ifuse"
+brew "jq"
 brew "mackup"
 brew "mas"
 brew "php"
