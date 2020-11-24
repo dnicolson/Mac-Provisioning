@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 
+# Alfred
+open -a "Alfred 4"
+read -p "Enter Alfred Powerpack..."
+# Allow ~/Dropbox/Apps path for Alfred preferences
+defaults write com.runningwithcrayons.Alfred-Preferences dropbox.allowappsfolder -bool TRUE
+defaults write com.runningwithcrayons.Alfred-Preferences syncfolder -string "~/Dropbox/Apps"
+
 # Chrome
 open -a "Google Chrome"
 read -p "Setup Chrome and close application..."
