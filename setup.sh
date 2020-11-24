@@ -89,6 +89,7 @@ defaults write com.runningwithcrayons.Alfred-Preferences syncfolder -string "~/D
 qlmanage -r
 
 # Show ~/Library folder
+setfile -a v ~/Library
 chflags nohidden ~/Library
 
 # Customise Dock
