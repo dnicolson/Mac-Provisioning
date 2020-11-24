@@ -70,7 +70,7 @@ pip install pylint pyatv
 # Custom Casks
 brew cask install ~/Dropbox/Code/Provisioning/phoneview.rb
 brew cask install ~/Dropbox/Code/Provisioning/pixelsnap2.rb
-brew cask install ~/Dropbox/Code/Provisioning/airbuddy.rb
+brew cask install ~/Dropbox/Code/Provisioning/airbuddy2.rb
 
 # fish shell
 echo /usr/local/bin/fish | sudo tee -a /etc/shells
