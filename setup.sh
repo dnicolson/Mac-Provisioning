@@ -13,6 +13,10 @@ if test ! $(which brew); then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
+# Log in to the App Store
+open -a "App Store"
+read -p "Log in to the App Store and press any key..."
+
 # Install Brews, Casks and MAS apps
 brew cask install osxfuse
 brew bundle
