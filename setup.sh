@@ -69,7 +69,7 @@ asdf global python $PYTHON3_VERSION $PYTHON2_VERSION
 # Install gems and packages
 gem install bundler dotenv pry sass scss_lint
 npm i -g prettier sass-lint eslint eslint-config-standard eslint-plugin-import eslint-plugin-node eslint-plugin-promise eslint-plugin-standard eslint-config-prettier eslint-plugin-prettier
-pip install pylint pyatv cfn-sphere
+pip install pylint pyatv cfn-sphere pyunpack patool
 
 # Custom Casks
 brew cask install ~/Dropbox/Code/Provisioning/phoneview.rb
