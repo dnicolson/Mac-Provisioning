@@ -3,9 +3,10 @@
 # Alfred
 open -a "Alfred 4"
 read -p "ℹ️  Enter Alfred Powerpack..."
-# Allow ~/Dropbox/Apps path for Alfred preferences
 defaults write com.runningwithcrayons.Alfred-Preferences dropbox.allowappsfolder -bool TRUE
-defaults write com.runningwithcrayons.Alfred-Preferences syncfolder -string "~/Dropbox/Apps"
+open -a "Alfred Preferences"
+read -p "ℹ️  Set \"~/Dropbox/Apps\" as the sync folder..."
+# defaults write com.runningwithcrayons.Alfred-Preferences syncfolder -string "~/Dropbox/Apps"
 
 # Chrome
 open -a "Google Chrome"
