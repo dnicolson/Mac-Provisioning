@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
 # Use scroll gesture with the Ctrl (^) modifier key to zoom
-defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
-defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
+echo "ℹ️  Enable Full Disk Access for the terminal and run the following command:"
+echo "defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true"
+echo
 
 # Disable the “are you sure you want to open this application?” dialog
 defaults write com.apple.LaunchServices LSQuarantine -bool false
@@ -82,10 +83,10 @@ defaults write com.apple.systemuiserver menuExtras -array \
 killall SystemUIServer
 
 # Add login items
-osascript -e 'tell application "System Events" to make login item at end with properties {name: "Alfred 4", path: "/Applications/Alfred 4.app"}'
-osascript -e 'tell application "System Events" to make login item at end with properties {name: "Itsycal", path: "/Applications/Itsycal.app"}'
-osascript -e 'tell application "System Events" to make login item at end with properties {name: "PixelSnap 2", path: "/Applications/PixelSnap 2.app"}'
-osascript -e 'tell application "System Events" to make login item at end with properties {name: "Rocket", path: "/Applications/Rocket.app"}'
+osascript -e 'tell application "System Events" to make login item at end with properties {name: "Alfred 4", path: "/Applications/Alfred 4.app"}' > /dev/null
+osascript -e 'tell application "System Events" to make login item at end with properties {name: "Itsycal", path: "/Applications/Itsycal.app"}' > /dev/null
+osascript -e 'tell application "System Events" to make login item at end with properties {name: "PixelSnap 2", path: "/Applications/PixelSnap 2.app"}' > /dev/null
+osascript -e 'tell application "System Events" to make login item at end with properties {name: "Rocket", path: "/Applications/Rocket.app"}' > /dev/null
 
 # Screen Saver
 defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName Aerial path ~/Library/Screen\ Savers/Aerial.saver type 0

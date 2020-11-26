@@ -2,8 +2,9 @@
 
 # SSH key
 ssh-keygen -t rsa
-echo "Please add this public key to GitHub"
-echo "https://github.com/account/ssh"
+echo "ℹ️  Please add this public key to GitHub: https://github.com/account/ssh"
+cat ~/.ssh/id_rsa.pub
+echo
 
 # Xcode
 xcode-select --install
@@ -15,7 +16,7 @@ fi
 
 # Log in to the App Store
 open -a "App Store"
-read -p "Log in to the App Store and press any key..."
+read -p "ℹ️  Log in to the App Store and press any key..."
 
 # Install Brews, Casks and MAS apps
 brew cask install osxfuse
@@ -27,7 +28,7 @@ xattr -r -d com.apple.quarantine /Applications 2> /dev/null
 xattr -r -d com.apple.quarantine ~/Library/QuickLook
 
 # Wait for Dropbox
-read -p "Setup Dropbox and press any key..."
+read -p "ℹ️  Setup Dropbox and press any key..."
 
 # Symlink application settings from Dropbox
 mackup restore
