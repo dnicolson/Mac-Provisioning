@@ -5,7 +5,12 @@ TMP_PREFS=/tmp/ChromePreferences
 TMP_PREFS2=/tmp/ChromePreferences2
 cp "$PREFS" $TMP_PREFS
 
-TIMESTAMP=$(python - <<END
+if [[ ! -s $PREFS ]]; then
+  echo "Preferences is empty or missing."
+  exit
+fi
+
+TIMESTAMP=$(python2 - <<END
 from datetime import datetime
 
 def calculateTimestamp():
@@ -19,6 +24,14 @@ END
 )
 
 # Handlers (chrome://settings/handlers?search=handlers)
+HAS_CUSTOM_HANDLERS=`cat "$PREFS" | jq '.custom_handlers'`
+if [ "$HAS_CUSTOM_HANDLERS" == "null" ]; then
+  echo "Adding custom_handlers object"
+  jq '. + {"custom_handlers": {"enabled": true, "ignored_protocol_handlers": [], "registered_protocol_handlers": []}}' $TMP_PREFS > $TMP_PREFS2
+  cp $TMP_PREFS2 $TMP_PREFS
+  cp $TMP_PREFS "$PREFS"
+fi
+
 HAS_MAILTO=`cat "$PREFS" | jq '.custom_handlers.registered_protocol_handlers' | jq 'contains([{"protocol": "mailto"}])'`
 if [ $HAS_MAILTO != "true" ]; then
   MAILTO=$(cat <<END
