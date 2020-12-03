@@ -68,4 +68,12 @@ fi
 jq .extensions.toolbarsize=6 $TMP_PREFS > $TMP_PREFS2
 cp $TMP_PREFS2 $TMP_PREFS
 
+# Disable site notifications
+jq '.profile += {"default_content_setting_values": {"notifications": 2}}' $TMP_PREFS > $TMP_PREFS2
+cp $TMP_PREFS2 $TMP_PREFS
+
+# Set DevTools Dock position
+jq '.devtools.preferences.currentDockState = "\"bottom\""' $TMP_PREFS > $TMP_PREFS2
+cp $TMP_PREFS2 $TMP_PREFS
+
 cp $TMP_PREFS "$PREFS"
