@@ -20,6 +20,9 @@ read -p "ℹ️  Setup TickTick and close application..."
 # Remove the Shift-Command-A hot key
 defaults write com.TickTick.task.mac TKQuickAddTaskHotkeyIdentifier -data ""
 
+# Remove the Shift-Command-O hot key
+defaults write com.TickTick.task.mac TKShowOrHideAppHotkeyIdentifier -data ""
+
 # Hide Smart Lists
 read -r -d '' XML <<'EOF'
 <dict>
