@@ -56,10 +56,6 @@ asdf install nodejs $NODE_VERSION
 asdf global nodejs $NODE_VERSION
 
 # Install Python
-export LDFLAGS="-L/usr/local/opt/zlib/lib"
-export CPPFLAGS="-I/usr/local/opt/zlib/include"
-export PKG_CONFIG_PATH="/usr/local/opt/zlib/lib/pkgconfig"
-export KEEP_BUILD_PATH=true
 asdf plugin-add python
 PYTHON2_VERSION=`asdf list-all python | grep -v [a-z] | grep '^2' | tail -1`
 PYTHON3_VERSION=`asdf list-all python | grep -v [a-z] | grep '^3' | tail -1`
