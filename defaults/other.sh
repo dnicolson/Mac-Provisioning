@@ -43,14 +43,4 @@ plutil -remove smart_project_display_status ~/Library/Group\ Containers/75TY9UT8
 plutil -insert smart_project_display_status -xml "$XML" ~/Library/Group\ Containers/75TY9UT8AY.com.TickTick.task.mac/Library/Preferences/75TY9UT8AY.com.TickTick.task.mac.plist
 
 # Calendar
-open -a "Calendar"
-read -p "ℹ️  Setup Calendar and close application..."
-IFS=$'\n'
-for CALENDAR in $(find ~/Library/Calendars -name "Info.plist")
-do
-  if plutil -extract Title xml1 -o - $CALENDAR | grep Birthdays > /dev/null; then
-    plutil -replace AlarmsDisabled -bool true $CALENDAR
-  fi
-done
-killall CalendarAgent
-rm ~/Library/Calendars/Calendar\ Cache*
+defaults write com.apple.iCal "display birthdays calendar" 0
