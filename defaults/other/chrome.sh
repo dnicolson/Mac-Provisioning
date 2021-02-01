@@ -64,6 +64,22 @@ END
   cp $TMP_PREFS2 $TMP_PREFS
 fi
 
+HAS_MAGNET=`cat "$PREFS" | jq '.custom_handlers.registered_protocol_handlers' | jq 'contains([{"protocol": "magnet"}])'`
+if [ $HAS_MAGNET != "true" ]; then
+  MAGNET=$(cat <<END
+  {
+    "default": true,
+    "last_modified": "$TIMESTAMP",
+    "protocol": "magnet",
+    "url": "https://app.put.io/newfile?magnet=%s"
+  }
+END
+)
+  echo "Adding magnet handler"
+  jq --argjson handler "$MAGNET" '.custom_handlers.registered_protocol_handlers |= . + [$handler]' $TMP_PREFS > $TMP_PREFS2
+  cp $TMP_PREFS2 $TMP_PREFS
+fi
+
 # Toolbar
 jq .extensions.toolbarsize=6 $TMP_PREFS > $TMP_PREFS2
 cp $TMP_PREFS2 $TMP_PREFS
