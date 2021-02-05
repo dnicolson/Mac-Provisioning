@@ -19,9 +19,9 @@ open -a "App Store"
 read -p "ℹ️  Log in to the App Store and press any key..."
 
 # Install Brews, Casks and MAS apps
-brew cask install osxfuse
+brew install --cask osxfuse
 brew bundle
-brew cask install docker vmware-fusion paragon-ntfs qlvideo xquartz adoptopenjdk8
+brew install --cask docker vmware-fusion paragon-ntfs qlvideo xquartz adoptopenjdk8
 
 # Remove quarantine
 xattr -r -d com.apple.quarantine /Applications 2> /dev/null
@@ -69,9 +69,9 @@ npm i -g prettier sass-lint eslint eslint-config-standard eslint-plugin-import e
 pip install pylint pyatv cfn-sphere pyunpack patool
 
 # Custom Casks
-brew cask install ~/Dropbox/Code/Provisioning/phoneview.rb
-brew cask install ~/Dropbox/Code/Provisioning/pixelsnap2.rb
-brew cask install ~/Dropbox/Code/Provisioning/airbuddy2.rb
+brew install --cask ~/Dropbox/Code/Provisioning/phoneview.rb
+brew install --cask ~/Dropbox/Code/Provisioning/pixelsnap2.rb
+brew install --cask ~/Dropbox/Code/Provisioning/airbuddy2.rb
 
 # fish shell
 echo /usr/local/bin/fish | sudo tee -a /etc/shells
