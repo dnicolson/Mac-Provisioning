@@ -19,7 +19,7 @@ open -a "App Store"
 read -p "ℹ️  Log in to the App Store and press any key..."
 
 # Install Brews, Casks and MAS apps
-brew install --cask osxfuse
+brew install --cask macfuse
 brew bundle
 brew install --cask docker vmware-fusion paragon-ntfs qlvideo xquartz adoptopenjdk8
 
