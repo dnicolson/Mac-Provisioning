@@ -48,6 +48,7 @@ com.microsoft.VSCode .yml    all
 com.microsoft.VSCode .sh     all
 com.microsoft.VSCode .fish   all
 com.microsoft.VSCode .plist  all
+com.microsoft.VSCode .ts     all
 
 com.google.chrome.canary http  all
 com.google.chrome.canary https all
