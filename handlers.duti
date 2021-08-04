@@ -1,5 +1,6 @@
 com.microsoft.VSCode .c      all
 com.microsoft.VSCode .js     all
+com.microsoft.VSCode .jsx    all
 com.microsoft.VSCode .conf   all
 com.microsoft.VSCode .cfg    all
 com.microsoft.VSCode .ini    all
