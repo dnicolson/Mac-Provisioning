@@ -46,36 +46,33 @@ mackup restore
 source $OPT_PATH/asdf/asdf.sh
 
 # Install Ruby
-asdf plugin-add ruby
-RUBY_VERSION=`asdf list-all ruby | grep -v [a-z] | tail -1`
-asdf install ruby $RUBY_VERSION
-asdf global ruby $RUBY_VERSION
+$BIN_PATH/asdf plugin-add ruby
+RUBY_VERSION=`$BIN_PATH/asdf list-all ruby | grep -v [a-z] | tail -1`
+$BIN_PATH/asdf install ruby $RUBY_VERSION
+$BIN_PATH/asdf global ruby $RUBY_VERSION
 
 # Install Node
-asdf plugin-add nodejs
-bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
-NODE8_VERSION=`asdf list-all nodejs | grep -v [a-z] | grep '^8' | tail -1`
-NODE10_VERSION=`asdf list-all nodejs | grep -v [a-z] | grep '^10' | tail -1`
-NODE12_VERSION=`asdf list-all nodejs | grep -v [a-z] | grep '^12' | tail -1`
-NODE_VERSION=`asdf list-all nodejs | grep -v [a-z] | tail -1`
-asdf install nodejs $NODE8_VERSION
-asdf install nodejs $NODE10_VERSION
-asdf install nodejs $NODE12_VERSION
-asdf install nodejs $NODE_VERSION
-asdf global nodejs $NODE_VERSION
+$BIN_PATH/asdf plugin-add nodejs
+NODE10_VERSION=`$BIN_PATH/asdf list-all nodejs | grep -v [a-z] | grep '^10' | tail -1`
+NODE12_VERSION=`$BIN_PATH/asdf list-all nodejs | grep -v [a-z] | grep '^12' | tail -1`
+NODE_VERSION=`$BIN_PATH/asdf list-all nodejs | grep -v [a-z] | tail -1`
+$BIN_PATH/asdf install nodejs $NODE10_VERSION
+$BIN_PATH/asdf install nodejs $NODE12_VERSION
+$BIN_PATH/asdf install nodejs $NODE_VERSION
+$BIN_PATH/asdf global nodejs $NODE_VERSION
 
 # Install Python
-asdf plugin-add python
-PYTHON2_VERSION=`asdf list-all python | grep -v [a-z] | grep '^2' | tail -1`
-PYTHON3_VERSION=`asdf list-all python | grep -v [a-z] | grep '^3' | tail -1`
-asdf install python $PYTHON2_VERSION
-asdf install python $PYTHON3_VERSION
-asdf global python $PYTHON3_VERSION $PYTHON2_VERSION
+$BIN_PATH/asdf plugin-add python
+PYTHON2_VERSION=`$BIN_PATH/asdf list-all python | grep -v [a-z] | grep '^2' | tail -1`
+PYTHON3_VERSION=`$BIN_PATH/asdf list-all python | grep -v [a-z] | grep '^3' | tail -1`
+$BIN_PATH/asdf install python $PYTHON2_VERSION
+$BIN_PATH/asdf install python $PYTHON3_VERSION
+$BIN_PATH/asdf global python $PYTHON3_VERSION $PYTHON2_VERSION
 
 # Install gems and packages
-gem install bundler dotenv pry sass scss_lint
-npm i -g prettier sass-lint eslint eslint-config-standard eslint-plugin-import eslint-plugin-node eslint-plugin-promise eslint-plugin-standard eslint-config-prettier eslint-plugin-prettier kill-port
-pip install pylint pyatv cfn-sphere pyunpack patool
+#gem install bundler dotenv pry sass scss_lint
+#npm i -g prettier sass-lint eslint eslint-config-standard eslint-plugin-import eslint-plugin-node eslint-plugin-promise eslint-plugin-standard eslint-config-prettier eslint-plugin-prettier kill-port
+#pip install pylint pyatv cfn-sphere pyunpack patool
 
 # fish shell
 echo $BIN_PATH/fish | sudo tee -a /etc/shells
