@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+read -p "ℹ️  Grant Terminal Full Disk Access in System Preferences > Security & Privacy > Privacy..."
 # SSH key
 ssh-keygen -t rsa
 echo "ℹ️  Please add this public key to GitHub: https://github.com/account/ssh"
