@@ -4,9 +4,10 @@ read -p "ℹ️  Grant Terminal Full Disk Access in System Preferences > Securit
 
 if [[ $(uname -m) == 'arm64' ]]; then
   BIN_PATH=/opt/homebrew/bin
-  sudo softwareupdate --install-rosetta
+  OPT_PATH=/opt/homebrew/opt
 else
   BIN_PATH=/usr/local/bin
+  OPT_PATH=/usr/local/opt
 fi
 
 # SSH key
@@ -42,7 +43,7 @@ read -p "ℹ️  Setup Dropbox and press any key..."
 mackup restore
 
 # Setup version manager
-source /usr/local/opt/asdf/asdf.sh
+source $OPT_PATH/asdf/asdf.sh
 
 # Install Ruby
 asdf plugin-add ruby
