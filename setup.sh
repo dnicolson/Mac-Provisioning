@@ -77,7 +77,7 @@ $BIN_PATH/asdf global python $PYTHON3_VERSION $PYTHON2_VERSION
 # fish shell
 echo $BIN_PATH/fish | sudo tee -a /etc/shells
 chsh -s $BIN_PATH/fish
-fish -c fisher
+$BIN_PATH/fish -c fisher
 
 # Restart QuickLook
 qlmanage -r
@@ -87,34 +87,34 @@ setfile -a v ~/Library
 chflags nohidden ~/Library
 
 # Customise Dock
-dockutil --no-restart --remove all
-dockutil --no-restart --add "/System/Applications/System Preferences.app"
-dockutil --no-restart --add "/System/Applications/iTunes.app"
-dockutil --no-restart --add "/Applications/Mimestream.app"
-dockutil --no-restart --add "/Applications/Slack.app"
-dockutil --no-restart --add "/System/Applications/Messages.app"
-dockutil --no-restart --add "/Applications/Messagenger.app"
-dockutil --no-restart --add "/System/Applications/Photos.app"
-dockutil --no-restart --add "/Applications/ReadKit.app"
-dockutil --no-restart --add "/Applications/1Password 7.app"
-dockutil --no-restart --add "/Applications/TickTick.app"
-dockutil --no-restart --add "/System/Applications/Notes.app"
-dockutil --no-restart --add "/Applications/Outbank.app"
-dockutil --no-restart --add "/Applications/Google Chrome.app"
-dockutil --no-restart --add "/Applications/Google Chrome Canary.app"
-dockutil --no-restart --add "/Applications/Safari.app"
-dockutil --no-restart --add "/Applications/Gitfox.app"
-dockutil --no-restart --add "/Applications/Visual Studio Code.app"
-dockutil --no-restart --add "/Applications/Sublime Text.app"
-dockutil --no-restart --add "/Applications/RunJS.app"
-dockutil --no-restart --add "/Applications/Xcode.app"
-dockutil --no-restart --add "/Applications/Hex Fiend.app"
-dockutil --no-restart --add "/System/Applications/Utilities/Console.app"
-dockutil --no-restart --add "/System/Applications/Utilities/Activity Monitor.app"
-dockutil --no-restart --add "/Applications/iTerm.app"
-dockutil --no-restart --add "/System/Applications/Home.app"
-dockutil --no-restart --add "/Applications/Books.app"
-dockutil --no-restart --add "/Applications/Streaks.app"
+$BIN_PATH/dockutil --no-restart --remove all
+$BIN_PATH/dockutil --no-restart --add "/System/Applications/System Preferences.app"
+$BIN_PATH/dockutil --no-restart --add "/System/Applications/iTunes.app"
+$BIN_PATH/dockutil --no-restart --add "/Applications/Mimestream.app"
+$BIN_PATH/dockutil --no-restart --add "/Applications/Slack.app"
+$BIN_PATH/dockutil --no-restart --add "/System/Applications/Messages.app"
+$BIN_PATH/dockutil --no-restart --add "/Applications/Messagenger.app"
+$BIN_PATH/dockutil --no-restart --add "/System/Applications/Photos.app"
+$BIN_PATH/dockutil --no-restart --add "/Applications/ReadKit.app"
+$BIN_PATH/dockutil --no-restart --add "/Applications/1Password 7.app"
+$BIN_PATH/dockutil --no-restart --add "/Applications/TickTick.app"
+$BIN_PATH/dockutil --no-restart --add "/System/Applications/Notes.app"
+$BIN_PATH/dockutil --no-restart --add "/Applications/Outbank.app"
+$BIN_PATH/dockutil --no-restart --add "/Applications/Google Chrome.app"
+$BIN_PATH/dockutil --no-restart --add "/Applications/Google Chrome Canary.app"
+$BIN_PATH/dockutil --no-restart --add "/Applications/Safari.app"
+$BIN_PATH/dockutil --no-restart --add "/Applications/Gitfox.app"
+$BIN_PATH/dockutil --no-restart --add "/Applications/Visual Studio Code.app"
+$BIN_PATH/dockutil --no-restart --add "/Applications/Sublime Text.app"
+$BIN_PATH/dockutil --no-restart --add "/Applications/RunJS.app"
+$BIN_PATH/dockutil --no-restart --add "/Applications/Xcode.app"
+$BIN_PATH/dockutil --no-restart --add "/Applications/Hex Fiend.app"
+$BIN_PATH/dockutil --no-restart --add "/System/Applications/Utilities/Console.app"
+$BIN_PATH/dockutil --no-restart --add "/System/Applications/Utilities/Activity Monitor.app"
+$BIN_PATH/dockutil --no-restart --add "/Applications/iTerm.app"
+$BIN_PATH/dockutil --no-restart --add "/System/Applications/Home.app"
+$BIN_PATH/dockutil --no-restart --add "/Applications/Books.app"
+$BIN_PATH/dockutil --no-restart --add "/Applications/Streaks.app"
 
 killall Dock
 
