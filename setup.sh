@@ -65,13 +65,8 @@ asdf global python $PYTHON3_VERSION $PYTHON2_VERSION
 
 # Install gems and packages
 gem install bundler dotenv pry sass scss_lint
-npm i -g prettier sass-lint eslint eslint-config-standard eslint-plugin-import eslint-plugin-node eslint-plugin-promise eslint-plugin-standard eslint-config-prettier eslint-plugin-prettier
+npm i -g prettier sass-lint eslint eslint-config-standard eslint-plugin-import eslint-plugin-node eslint-plugin-promise eslint-plugin-standard eslint-config-prettier eslint-plugin-prettier kill-port
 pip install pylint pyatv cfn-sphere pyunpack patool
-
-# Custom Casks
-brew install --cask ~/Dropbox/Code/Provisioning/phoneview.rb
-brew install --cask ~/Dropbox/Code/Provisioning/pixelsnap2.rb
-brew install --cask ~/Dropbox/Code/Provisioning/airbuddy2.rb
 
 # fish shell
 echo /usr/local/bin/fish | sudo tee -a /etc/shells
