@@ -1,6 +1,14 @@
 #!/usr/bin/env bash
 
 read -p "ℹ️  Grant Terminal Full Disk Access in System Preferences > Security & Privacy > Privacy..."
+
+if [[ $(uname -m) == 'arm64' ]]; then
+  BIN_PATH=/opt/homebrew/bin
+  sudo softwareupdate --install-rosetta
+else
+  BIN_PATH=/usr/local/bin
+fi
+
 # SSH key
 ssh-keygen -t rsa
 echo "ℹ️  Please add this public key to GitHub: https://github.com/account/ssh"
@@ -20,9 +28,9 @@ open -a "App Store"
 read -p "ℹ️  Log in to the App Store and press any key..."
 
 # Install Brews, Casks and MAS apps
-brew install --cask macfuse
-brew bundle
-brew install --cask docker vmware-fusion paragon-ntfs qlvideo xquartz adoptopenjdk8
+$BIN_PATH/brew install --cask macfuse
+$BIN_PATH/brew bundle
+$BIN_PATH/brew install --cask docker vmware-fusion paragon-ntfs qlvideo xquartz adoptopenjdk8
 
 # Remove quarantine
 xattr -r -d com.apple.quarantine /Applications 2> /dev/null
@@ -70,8 +78,8 @@ npm i -g prettier sass-lint eslint eslint-config-standard eslint-plugin-import e
 pip install pylint pyatv cfn-sphere pyunpack patool
 
 # fish shell
-echo /usr/local/bin/fish | sudo tee -a /etc/shells
-chsh -s /usr/local/bin/fish
+echo $BIN_PATH/fish | sudo tee -a /etc/shells
+chsh -s $BIN_PATH/fish
 fish -c fisher
 
 # Restart QuickLook
