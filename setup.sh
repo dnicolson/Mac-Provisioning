@@ -93,7 +93,7 @@ $BIN_PATH/dockutil --no-restart --add "/System/Applications/iTunes.app"
 $BIN_PATH/dockutil --no-restart --add "/Applications/Mimestream.app"
 $BIN_PATH/dockutil --no-restart --add "/Applications/Slack.app"
 $BIN_PATH/dockutil --no-restart --add "/System/Applications/Messages.app"
-$BIN_PATH/dockutil --no-restart --add "/Applications/Messagenger.app"
+$BIN_PATH/dockutil --no-restart --add "/Applications/Messenger.app"
 $BIN_PATH/dockutil --no-restart --add "/System/Applications/Photos.app"
 $BIN_PATH/dockutil --no-restart --add "/Applications/ReadKit.app"
 $BIN_PATH/dockutil --no-restart --add "/Applications/1Password 7.app"
@@ -113,7 +113,7 @@ $BIN_PATH/dockutil --no-restart --add "/System/Applications/Utilities/Console.ap
 $BIN_PATH/dockutil --no-restart --add "/System/Applications/Utilities/Activity Monitor.app"
 $BIN_PATH/dockutil --no-restart --add "/Applications/iTerm.app"
 $BIN_PATH/dockutil --no-restart --add "/System/Applications/Home.app"
-$BIN_PATH/dockutil --no-restart --add "/Applications/Books.app"
+$BIN_PATH/dockutil --no-restart --add "/System/Applications/Books.app"
 $BIN_PATH/dockutil --no-restart --add "/Applications/Streaks.app"
 
 killall Dock
