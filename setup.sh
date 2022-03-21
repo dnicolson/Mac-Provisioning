@@ -3,12 +3,14 @@
 read -p "ℹ️  Grant Terminal Full Disk Access in System Preferences > Security & Privacy > Privacy..."
 
 if [[ $(uname -m) == 'arm64' ]]; then
-  BIN_PATH=/opt/homebrew/bin
-  OPT_PATH=/opt/homebrew/opt
+  softwareupdate --install-rosetta --agree-to-license
+  PREFIX=/opt/homebrew/
 else
-  BIN_PATH=/usr/local/bin
-  OPT_PATH=/usr/local/opt
+  PREFIX=/usr/local/
 fi
+PATH=$PREFIX/bin:$PATH
+BIN_PATH=$PREFIX/bin
+OPT_PATH=$PREFIX/opt
 
 # SSH key
 ssh-keygen -t rsa
@@ -29,8 +31,8 @@ open -a "App Store"
 read -p "ℹ️  Log in to the App Store and press any key..."
 
 # Install Brews, Casks and MAS apps
-$BIN_PATH/brew install --cask macfuse docker vmware-fusion paragon-ntfs qlvideo xquartz adoptopenjdk8
-$BIN_PATH/brew bundle
+brew install --cask macfuse docker vmware-fusion paragon-ntfs qlvideo xquartz adoptopenjdk8
+brew bundle
 
 # Remove quarantine
 xattr -r -d com.apple.quarantine /Applications 2> /dev/null
@@ -46,38 +48,38 @@ mackup restore
 source $OPT_PATH/asdf/asdf.sh
 
 # Install Ruby
-$BIN_PATH/asdf plugin-add ruby
-RUBY_VERSION=`$BIN_PATH/asdf list-all ruby | grep -v [a-z] | tail -1`
-$BIN_PATH/asdf install ruby $RUBY_VERSION
-$BIN_PATH/asdf global ruby $RUBY_VERSION
+asdf plugin-add ruby
+RUBY_VERSION=`asdf list-all ruby | grep -v [a-z] | tail -1`
+asdf install ruby $RUBY_VERSION
+asdf global ruby $RUBY_VERSION
 
 # Install Node
-$BIN_PATH/asdf plugin-add nodejs
-NODE10_VERSION=`$BIN_PATH/asdf list-all nodejs | grep -v [a-z] | grep '^10' | tail -1`
-NODE12_VERSION=`$BIN_PATH/asdf list-all nodejs | grep -v [a-z] | grep '^12' | tail -1`
-NODE_VERSION=`$BIN_PATH/asdf list-all nodejs | grep -v [a-z] | tail -1`
-$BIN_PATH/asdf install nodejs $NODE10_VERSION
-$BIN_PATH/asdf install nodejs $NODE12_VERSION
-$BIN_PATH/asdf install nodejs $NODE_VERSION
-$BIN_PATH/asdf global nodejs $NODE_VERSION
+asdf plugin-add nodejs
+NODE10_VERSION=`asdf list-all nodejs | grep -v [a-z] | grep '^10' | tail -1`
+NODE12_VERSION=`asdf list-all nodejs | grep -v [a-z] | grep '^12' | tail -1`
+NODE_VERSION=`asdf list-all nodejs | grep -v [a-z] | tail -1`
+asdf install nodejs $NODE10_VERSION
+asdf install nodejs $NODE12_VERSION
+asdf install nodejs $NODE_VERSION
+asdf global nodejs $NODE_VERSION
 
 # Install Python
-$BIN_PATH/asdf plugin-add python
-PYTHON2_VERSION=`$BIN_PATH/asdf list-all python | grep -v [a-z] | grep '^2' | tail -1`
-PYTHON3_VERSION=`$BIN_PATH/asdf list-all python | grep -v [a-z] | grep '^3' | tail -1`
-$BIN_PATH/asdf install python $PYTHON2_VERSION
-$BIN_PATH/asdf install python $PYTHON3_VERSION
-$BIN_PATH/asdf global python $PYTHON3_VERSION $PYTHON2_VERSION
+asdf plugin-add python
+PYTHON2_VERSION=`asdf list-all python | grep -v [a-z] | grep '^2' | tail -1`
+PYTHON3_VERSION=`asdf list-all python | grep -v [a-z] | grep '^3' | tail -1`
+asdf install python $PYTHON2_VERSION
+asdf install python $PYTHON3_VERSION
+asdf global python $PYTHON3_VERSION $PYTHON2_VERSION
 
 # Install gems and packages
-#gem install bundler dotenv pry sass scss_lint
-#npm i -g prettier sass-lint eslint eslint-config-standard eslint-plugin-import eslint-plugin-node eslint-plugin-promise eslint-plugin-standard eslint-config-prettier eslint-plugin-prettier kill-port
-#pip install pylint pyatv cfn-sphere pyunpack patool
+gem install bundler dotenv pry sass scss_lint
+npm i -g prettier sass-lint eslint eslint-config-standard eslint-plugin-import eslint-plugin-node lint-plugin-promise eslint-plugin-standard eslint-config-prettier eslint-plugin-prettier kill-port
+pip install pylint pyatv cfn-sphere pyunpack patool
 
 # fish shell
 echo $BIN_PATH/fish | sudo tee -a /etc/shells
 chsh -s $BIN_PATH/fish
-$BIN_PATH/fish -c fisher
+fish -c fisher
 
 # Restart QuickLook
 qlmanage -r
@@ -87,34 +89,34 @@ setfile -a v ~/Library
 chflags nohidden ~/Library
 
 # Customise Dock
-$BIN_PATH/dockutil --no-restart --remove all
-$BIN_PATH/dockutil --no-restart --add "/System/Applications/System Preferences.app"
-$BIN_PATH/dockutil --no-restart --add "/System/Applications/iTunes.app"
-$BIN_PATH/dockutil --no-restart --add "/Applications/Mimestream.app"
-$BIN_PATH/dockutil --no-restart --add "/Applications/Slack.app"
-$BIN_PATH/dockutil --no-restart --add "/System/Applications/Messages.app"
-$BIN_PATH/dockutil --no-restart --add "/Applications/Messenger.app"
-$BIN_PATH/dockutil --no-restart --add "/System/Applications/Photos.app"
-$BIN_PATH/dockutil --no-restart --add "/Applications/ReadKit.app"
-$BIN_PATH/dockutil --no-restart --add "/Applications/1Password 7.app"
-$BIN_PATH/dockutil --no-restart --add "/Applications/TickTick.app"
-$BIN_PATH/dockutil --no-restart --add "/System/Applications/Notes.app"
-$BIN_PATH/dockutil --no-restart --add "/Applications/Outbank.app"
-$BIN_PATH/dockutil --no-restart --add "/Applications/Google Chrome.app"
-$BIN_PATH/dockutil --no-restart --add "/Applications/Google Chrome Canary.app"
-$BIN_PATH/dockutil --no-restart --add "/Applications/Safari.app"
-$BIN_PATH/dockutil --no-restart --add "/Applications/Gitfox.app"
-$BIN_PATH/dockutil --no-restart --add "/Applications/Visual Studio Code.app"
-$BIN_PATH/dockutil --no-restart --add "/Applications/Sublime Text.app"
-$BIN_PATH/dockutil --no-restart --add "/Applications/RunJS.app"
-$BIN_PATH/dockutil --no-restart --add "/Applications/Xcode.app"
-$BIN_PATH/dockutil --no-restart --add "/Applications/Hex Fiend.app"
-$BIN_PATH/dockutil --no-restart --add "/System/Applications/Utilities/Console.app"
-$BIN_PATH/dockutil --no-restart --add "/System/Applications/Utilities/Activity Monitor.app"
-$BIN_PATH/dockutil --no-restart --add "/Applications/iTerm.app"
-$BIN_PATH/dockutil --no-restart --add "/System/Applications/Home.app"
-$BIN_PATH/dockutil --no-restart --add "/System/Applications/Books.app"
-$BIN_PATH/dockutil --no-restart --add "/Applications/Streaks.app"
+dockutil --no-restart --remove all
+dockutil --no-restart --add "/System/Applications/System Preferences.app"
+dockutil --no-restart --add "/System/Applications/iTunes.app"
+dockutil --no-restart --add "/Applications/Mimestream.app"
+dockutil --no-restart --add "/Applications/Slack.app"
+dockutil --no-restart --add "/System/Applications/Messages.app"
+dockutil --no-restart --add "/Applications/Messenger.app"
+dockutil --no-restart --add "/System/Applications/Photos.app"
+dockutil --no-restart --add "/Applications/ReadKit.app"
+dockutil --no-restart --add "/Applications/1Password 7.app"
+dockutil --no-restart --add "/Applications/TickTick.app"
+dockutil --no-restart --add "/System/Applications/Notes.app"
+dockutil --no-restart --add "/Applications/Outbank.app"
+dockutil --no-restart --add "/Applications/Google Chrome.app"
+dockutil --no-restart --add "/Applications/Google Chrome Canary.app"
+dockutil --no-restart --add "/Applications/Safari.app"
+dockutil --no-restart --add "/Applications/Gitfox.app"
+dockutil --no-restart --add "/Applications/Visual Studio Code.app"
+dockutil --no-restart --add "/Applications/Sublime Text.app"
+dockutil --no-restart --add "/Applications/RunJS.app"
+dockutil --no-restart --add "/Applications/Xcode.app"
+dockutil --no-restart --add "/Applications/Hex Fiend.app"
+dockutil --no-restart --add "/System/Applications/Utilities/Console.app"
+dockutil --no-restart --add "/System/Applications/Utilities/Activity Monitor.app"
+dockutil --no-restart --add "/Applications/iTerm.app"
+dockutil --no-restart --add "/System/Applications/Home.app"
+dockutil --no-restart --add "/System/Applications/Books.app"
+dockutil --no-restart --add "/Applications/Streaks.app"
 
 killall Dock
 
