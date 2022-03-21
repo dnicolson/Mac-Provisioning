@@ -93,6 +93,7 @@ cask "ios-app-signer"
 cask "iterm2"
 cask "itsycal"
 cask "kaleidoscope"
+cask "moneymoney"
 cask "openemu"
 cask "launchcontrol"
 cask "macfuse"
@@ -140,7 +141,6 @@ mas "Infuse", id: 1136220934
 mas "Key Codes", id: 414568915
 mas "Magnet", id: 441258766
 mas "Mate Translate", id: 1005088137
-mas "Outbank", id: 1094255754
 mas "ReadKit", id: 588726889
 mas "Slack", id: 803453959
 mas "Streaks", id: 963034692
