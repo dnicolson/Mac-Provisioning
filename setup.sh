@@ -140,3 +140,40 @@ sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
 
 # Set default DNS
 networksetup -setdnsservers Wi-Fi 1.1.1.1 1.0.0.1 2606:4700:4700::1111 2606:4700:4700::1001
+
+echo -e "\033[1mFinal Steps\033[0m"
+
+cat << EOF
+macOS
+- Enable Messages in iCloud in Messages
+- Set resolution to 'More Space' in System Preferences > Displays
+- Uncheck 'Show date' in System Preferences > Dock & Menu Bar > Clock
+- Authorize Music
+
+Chrome
+- Sign in
+- Add 'https://www.dropbox.com/s/raw/<id>/AdblockPlusFilterList.txt' to the 'Adblock Plus' filter list
+- Setup Tampermonkey Dropbox sync
+
+AppCleaner
+- Turn on SmartDelete
+
+Visual Studio Code
+- Turn on Settings Sync
+
+Sublime Text
+- Install Package Control
+
+Gitfox
+- Install command line utility
+
+Itsycal
+- Launch
+
+Accounts
+- Add Feedly and Instapaper accounts to ReadKit
+- Sign in with Google to Mimestream
+- Sign in with Google to TickTick 
+- Sign in to Slack
+- Sign in to Mate Translate
+EOF
