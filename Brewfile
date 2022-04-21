@@ -111,7 +111,6 @@ cask "quicklook-json"
 cask "quicklookase"
 cask "rar"
 cask "raycast"
-cask "rocket"
 cask "runjs"
 cask "script-debugger"
 cask "sequel-ace"
@@ -131,7 +130,7 @@ cask "vmware-fusion"
 cask "webpquicklook"
 cask "xld"
 cask "zoom"
-mas "Apple Configurator 2", id: 1037126344
+mas "Apple Configurator", id: 1037126344
 mas "Deliveries", id: 924726344
 mas "Download Buddy", id: 802165887
 mas "Gitfox", id: 1475511261
@@ -143,7 +142,7 @@ mas "Mate Translate", id: 1005088137
 mas "ReadKit", id: 588726889
 mas "Slack", id: 803453959
 mas "Streaks", id: 963034692
-mas "TickTick", id: 966085870
 mas "The Unarchiver", id: 425424353
+mas "TickTick", id: 966085870
 mas "ToothFairy", id: 1191449274
 mas "Xcode", id: 497799835

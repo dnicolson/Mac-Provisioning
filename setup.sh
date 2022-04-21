@@ -173,7 +173,7 @@ Itsycal
 Accounts
 - Add Feedly and Instapaper accounts to ReadKit
 - Sign in with Google to Mimestream
-- Sign in with Google to TickTick 
+- Sign in with Google to TickTick
 - Sign in to Slack
 - Sign in to Mate Translate
 EOF
