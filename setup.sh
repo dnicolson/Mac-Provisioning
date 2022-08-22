@@ -73,7 +73,7 @@ asdf global python $PYTHON3_VERSION $PYTHON2_VERSION
 
 # Install gems and packages
 gem install bundler dotenv pry sass scss_lint
-npm i -g prettier sass-lint eslint eslint-config-standard eslint-plugin-import eslint-plugin-node lint-plugin-promise eslint-plugin-standard eslint-config-prettier eslint-plugin-prettier kill-port
+npm i -g prettier sass-lint eslint eslint-config-standard eslint-plugin-import eslint-plugin-node eslint-plugin-promise eslint-plugin-standard eslint-config-prettier eslint-plugin-prettier kill-port
 pip install pylint pyatv cfn-sphere pyunpack patool
 
 # fish shell
