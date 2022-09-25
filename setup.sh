@@ -55,11 +55,9 @@ asdf global ruby $RUBY_VERSION
 
 # Install Node
 asdf plugin-add nodejs
-NODE10_VERSION=`asdf list-all nodejs | grep -v [a-z] | grep '^10' | tail -1`
-NODE12_VERSION=`asdf list-all nodejs | grep -v [a-z] | grep '^12' | tail -1`
 NODE_VERSION=`asdf list-all nodejs | grep -v [a-z] | tail -1`
-asdf install nodejs $NODE10_VERSION
-asdf install nodejs $NODE12_VERSION
+asdf install nodejs lts-fermium # 14
+asdf install nodejs lts-gallium # 16
 asdf install nodejs $NODE_VERSION
 asdf global nodejs $NODE_VERSION
 
@@ -73,7 +71,7 @@ asdf global python $PYTHON3_VERSION $PYTHON2_VERSION
 
 # Install gems and packages
 gem install bundler dotenv pry sass scss_lint
-npm i -g prettier sass-lint eslint eslint-config-standard eslint-plugin-import eslint-plugin-node eslint-plugin-promise eslint-plugin-standard eslint-config-prettier eslint-plugin-prettier kill-port
+npm i -g serverless vsce kill-port
 pip install pylint pyatv cfn-sphere pyunpack patool
 
 # fish shell
