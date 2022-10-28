@@ -48,7 +48,7 @@ read -p "ℹ️  Setup Dropbox and press any key..."
 mackup restore
 
 # Setup version manager
-source $OPT_PATH/asdf/asdf.sh
+source $OPT_PATH/asdf/libexec/asdf.sh
 
 # Install Ruby
 asdf plugin-add ruby
