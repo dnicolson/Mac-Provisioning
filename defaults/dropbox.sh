@@ -44,3 +44,7 @@ END
 
 cd ..
 rm -rf dbx-keygen-macos sqlite3-dbx
+
+killall Dropbox
+sleep 1
+open -a Dropbox
