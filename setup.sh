@@ -4,9 +4,9 @@ read -p "ℹ️  Grant Terminal Full Disk Access in System Preferences > Securit
 
 if [[ $(uname -m) == 'arm64' ]]; then
   softwareupdate --install-rosetta --agree-to-license
-  PREFIX=/opt/homebrew/
+  PREFIX=/opt/homebrew
 else
-  PREFIX=/usr/local/
+  PREFIX=/usr/local
 fi
 PATH=$PREFIX/bin:$PATH
 BIN_PATH=$PREFIX/bin
