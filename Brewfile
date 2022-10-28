@@ -135,7 +135,6 @@ cask "xld"
 mas "Apple Configurator", id: 1037126344
 mas "Deliveries", id: 924726344
 mas "Download Buddy", id: 802165887
-mas "Gitfox", id: 1475511261
 mas "Grammatisch", id: 1163927830
 mas "Icon Slate", id: 439697913
 mas "Infuse", id: 1136220934

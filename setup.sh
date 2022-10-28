@@ -166,9 +166,6 @@ Visual Studio Code
 Sublime Text
 - Install Package Control
 
-Gitfox
-- Install command line utility
-
 Itsycal
 - Launch
 
