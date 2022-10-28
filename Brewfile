@@ -142,7 +142,7 @@ mas "Key Codes", id: 414568915
 mas "Magnet", id: 441258766
 mas "Mate Translate", id: 1005088137
 mas "MoneyMoney", id: 872698314
-mas "ReadKit", id: 588726889
+mas "Reeder", id: 1529448980
 mas "Slack", id: 803453959
 mas "Streaks", id: 963034692
 mas "The Unarchiver", id: 425424353
