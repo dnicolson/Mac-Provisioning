@@ -46,13 +46,6 @@ defaults write com.apple.ScriptEditor2 DefaultLanguageType -int 1785946994
 # Hide welcome window
 defaults write com.apple.dt.Xcode XCShowWelcomeWindow 0
 
-# iTunes
-defaults write com.apple.iTunes dontAskDownloadArtwork 1
-defaults write com.apple.iTunes dontAskForPlaylistItemRemoval 1
-defaults write com.apple.iTunes dontAskForPlaylistRemoval 1
-defaults write com.apple.iTunes dontWarnWhenEditingMultiple 1
-defaults write com.apple.iTunes automaticallyDownloadArtwork 1
-
 # Music
 defaults write com.apple.Music dontAskDownloadArtwork 1
 defaults write com.apple.Music dontAskForPlaylistItemRemoval 1
