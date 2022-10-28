@@ -147,9 +147,10 @@ echo -e "\033[1mFinal Steps\033[0m"
 
 cat << EOF
 macOS
-- Enable Messages in iCloud in Messages
+- Log in to iCloud
 - Set resolution to 'More Space' in System Preferences > Displays
 - Uncheck 'Show date' in System Preferences > Dock & Menu Bar > Clock
+- Change appearance to dark
 - Authorize Music
 
 Chrome
@@ -169,10 +170,14 @@ Sublime Text
 Itsycal
 - Launch
 
+Raycast
+- Open and sign in with GitHub
+- Import Open in Code extension
+
 Accounts
-- Add Feedly and Instapaper accounts to ReadKit
-- Sign in with Google to Mimestream
-- Sign in with Google to TickTick
+- Add Feedly and Instapaper accounts to Reeder
+- Sign in to Mimestream with Google
+- Sign in to TickTick with Google
 - Sign in to Slack
 - Sign in to Mate Translate
 EOF
