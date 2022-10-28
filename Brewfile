@@ -132,7 +132,6 @@ cask "vmware-fusion"
 cask "webpquicklook"
 cask "xbar"
 cask "xld"
-cask "zoom"
 mas "Apple Configurator", id: 1037126344
 mas "Deliveries", id: 924726344
 mas "Download Buddy", id: 802165887

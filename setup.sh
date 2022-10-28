@@ -31,7 +31,7 @@ open -a "App Store"
 read -p "ℹ️  Log in to the App Store and press any key..."
 
 # Install Brews, Casks and MAS apps
-brew install --cask macfuse docker vmware-fusion paragon-ntfs qlvideo xquartz adoptopenjdk8
+brew install --cask macfuse docker vmware-fusion paragon-ntfs qlvideo xquartz adoptopenjdk8 zoom
 brew bundle
 
 # Remove quarantine
