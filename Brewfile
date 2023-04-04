@@ -46,6 +46,7 @@ brew "postgresql", restart_service: true
 brew "pv"
 brew "redis", restart_service: true
 brew "ripgrep"
+brew "swift-sh"
 brew "telnet"
 brew "tig"
 brew "tree"
