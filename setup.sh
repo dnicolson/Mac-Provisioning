@@ -47,36 +47,6 @@ read -p "ℹ️  Setup Dropbox and press any key..."
 # Symlink application settings from Dropbox
 mackup restore
 
-# Setup version manager
-source $OPT_PATH/asdf/libexec/asdf.sh
-
-# Install Ruby
-asdf plugin-add ruby
-RUBY_VERSION=`asdf list-all ruby | grep -v [a-z] | tail -1`
-asdf install ruby $RUBY_VERSION
-asdf global ruby $RUBY_VERSION
-
-# Install Node
-asdf plugin-add nodejs
-NODE_VERSION=`asdf list-all nodejs | grep -v [a-z] | tail -1`
-asdf install nodejs lts-fermium # 14
-asdf install nodejs lts-gallium # 16
-asdf install nodejs $NODE_VERSION
-asdf global nodejs $NODE_VERSION
-
-# Install Python
-asdf plugin-add python
-PYTHON2_VERSION=`asdf list-all python | grep -v [a-z] | grep '^2' | tail -1`
-PYTHON3_VERSION=`asdf list-all python | grep -v [a-z] | grep '^3' | tail -1`
-asdf install python $PYTHON2_VERSION
-asdf install python $PYTHON3_VERSION
-asdf global python $PYTHON3_VERSION $PYTHON2_VERSION
-
-# Install gems and packages
-gem install bundler dotenv pry sass scss_lint
-npm i -g serverless vsce kill-port
-pip install pylint pyatv cfn-sphere pyunpack patool
-
 # fish shell
 echo $BIN_PATH/fish | sudo tee -a /etc/shells
 chsh -s $BIN_PATH/fish
