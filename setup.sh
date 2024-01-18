@@ -147,6 +147,9 @@ Raycast
 - Open and sign in with GitHub
 - Import Open in Code extension
 
+TopNotch
+- Open and enable
+
 Accounts
 - Add Feedly and Instapaper accounts to Reeder
 - Sign in to Mimestream with Google
