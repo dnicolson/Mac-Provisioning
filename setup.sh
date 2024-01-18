@@ -20,6 +20,7 @@ echo
 
 # Xcode
 xcode-select --install
+sudo xcodebuild -license accept
 
 # Homebrew
 if test ! $(which brew); then
