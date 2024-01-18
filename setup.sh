@@ -125,6 +125,7 @@ macOS
 - Set resolution to 'More Space' in System Settings > Displays
 - Uncheck 'Show date' in System Settings > Control Center > Clock Options...
 - Change appearance to dark
+- Disable 'Force Click and haptic feedback' in System Settings > Trackpad
 - Authorize Music
 
 Chrome
@@ -149,6 +150,9 @@ Raycast
 
 TopNotch
 - Open and enable
+
+Tower
+- Activate license
 
 Accounts
 - Add Feedly and Instapaper accounts to Reeder
