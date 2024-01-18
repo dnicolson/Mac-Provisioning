@@ -151,7 +151,6 @@ Raycast
 Accounts
 - Add Feedly and Instapaper accounts to Reeder
 - Sign in to Mimestream with Google
-- Sign in to TickTick with Google
 - Sign in to Slack
 - Sign in to Mate Translate
 EOF
