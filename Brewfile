@@ -38,6 +38,7 @@ brew "mackup"
 brew "mas"
 brew "maven"
 brew "memcached", restart_service: true
+brew "mise"
 brew "mp3splt"
 brew "mysql", restart_service: true
 brew "nmap"
@@ -47,7 +48,6 @@ brew "postgresql", restart_service: true
 brew "pv"
 brew "redis", restart_service: true
 brew "ripgrep"
-brew "rtx"
 brew "swift-sh"
 brew "telnet"
 brew "tig"
