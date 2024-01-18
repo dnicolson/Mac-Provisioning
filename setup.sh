@@ -50,6 +50,8 @@ read -p "ℹ️  Set up Dropbox and press any key..."
 # Symlink application settings from Dropbox
 mackup restore
 
+mise install
+
 # fish shell
 echo $BIN_PATH/fish | sudo tee -a /etc/shells
 chsh -s $BIN_PATH/fish
