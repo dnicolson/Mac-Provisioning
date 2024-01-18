@@ -55,7 +55,6 @@ mise install
 # fish shell
 echo $BIN_PATH/fish | sudo tee -a /etc/shells
 chsh -s $BIN_PATH/fish
-fish -c fisher
 
 # Restart QuickLook
 qlmanage -r
