@@ -3,7 +3,7 @@
 cd /tmp
 git clone https://github.com/dnicolson/dbx-keygen-macos.git
 cd dbx-keygen-macos
-pip2 install crypto pycrypto simplejson pbkdf2
+pip2 install pyyaml==5.3.1 crypto pycrypto simplejson pbkdf2
 KEY=`python2 dbx-keygen-macos.py | tr '\n' '\r' | sed -e 's/.*Database key:  \(.*\)./\1/g'`
 
 cd ..
