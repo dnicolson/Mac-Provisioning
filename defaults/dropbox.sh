@@ -25,7 +25,7 @@ gcc -o sqlite3 -I. -DSQLITE_HAS_CODEC -DHAVE_READLINE shell.c sqlite3.c -Wall -g
 
 # SELECT key, QUOTE(value) FROM config;
 
-./sqlite3 -key $KEY ~/.dropbox/instance1/config.dbx <<END
+./sqlite3 -key $KEY $(ls ~/.dropbox/instance[0-9]*/config.dbx) <<END
 INSERT OR IGNORE INTO config (key, value) VALUES ('save_screenshots', 0);
 INSERT OR IGNORE INTO config (key, value) VALUES ('photo_import', 0);
 INSERT OR IGNORE INTO config (key, value) VALUES ('chrome-extension-notif-seen', 1);
