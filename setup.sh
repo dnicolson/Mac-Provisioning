@@ -45,7 +45,7 @@ xattr -r -d com.apple.quarantine /Applications 2> /dev/null
 xattr -r -d com.apple.quarantine ~/Library/QuickLook
 
 # Wait for Dropbox
-read -p "ℹ️  Setup Dropbox and press any key..."
+read -p "ℹ️  Set up Dropbox and press any key..."
 
 # Symlink application settings from Dropbox
 mackup restore
@@ -128,7 +128,7 @@ macOS
 Chrome
 - Sign in
 - Add 'https://www.dropbox.com/s/raw/<id>/AdblockPlusFilterList.txt' to the 'Adblock Plus' filter list
-- Setup Tampermonkey Dropbox sync
+- Set up Tampermonkey Dropbox sync
 
 AppCleaner
 - Turn on SmartDelete

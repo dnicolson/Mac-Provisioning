@@ -1,7 +1,7 @@
 Mac Provisioning
 ================
 
-Tools and scripts to setup a new Mac.
+Tools and scripts to set up a new Mac.
 
 ## Usage
 
