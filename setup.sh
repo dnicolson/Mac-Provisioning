@@ -66,7 +66,7 @@ chflags nohidden ~/Library
 
 # Customise Dock
 dockutil --no-restart --remove all
-dockutil --no-restart --add "/System/Applications/System Preferences.app"
+dockutil --no-restart --add "/System/Applications/System Settings.app"
 dockutil --no-restart --add "/System/Applications/Music.app"
 dockutil --no-restart --add "/System/Applications/Photos.app"
 dockutil --no-restart --add "/Applications/Mimestream.app"
@@ -122,13 +122,12 @@ echo -e "\033[1mFinal Steps\033[0m"
 cat << EOF
 macOS
 - Log in to iCloud
-- Set resolution to 'More Space' in System Preferences > Displays
-- Uncheck 'Show date' in System Preferences > Dock & Menu Bar > Clock
+- Set resolution to 'More Space' in System Settings > Displays
+- Uncheck 'Show date' in System Settings > Control Center > Clock Options...
 - Change appearance to dark
 - Authorize Music
 
 Chrome
-- Sign in
 - Add 'https://www.dropbox.com/s/raw/<id>/AdblockPlusFilterList.txt' to the 'Adblock Plus' filter list
 - Set up Tampermonkey Dropbox sync
 
