@@ -153,6 +153,9 @@ TopNotch
 Tower
 - Activate license
 
+PixelSnap
+- Enter license
+
 Accounts
 - Add Feedly and Instapaper accounts to Reeder
 - Sign in to Mimestream with Google
