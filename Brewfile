@@ -41,6 +41,7 @@ brew "mise"
 brew "mp3splt"
 brew "mysql", restart_service: true
 brew "nmap"
+brew "node"
 brew "perl"
 brew "php", restart_service: true
 brew "postgresql", restart_service: true
