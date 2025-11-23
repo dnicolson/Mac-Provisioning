@@ -98,7 +98,7 @@ killall Dock
 # Defaults
 ./defaults.sh
 
-# Add Go2Shell to Finder
+# Add OpenInTerminal-Lite.app to Finder
 ./defaults/finder.sh
 
 # Set Dropbox defaults
