@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-read -p "ℹ️  Grant Terminal Full Disk Access in System Preferences > Security & Privacy > Privacy..."
+read -p "ℹ️  Grant Terminal Full Disk Access in System Settings > Privacy & Security > Full Disk Access"
 
 if [[ $(uname -m) == 'arm64' ]]; then
   softwareupdate --install-rosetta --agree-to-license
@@ -120,15 +120,20 @@ echo -e "\033[1mFinal Steps\033[0m"
 
 cat << EOF
 macOS
-- Log in to iCloud
-- Set resolution to 'More Space' in System Settings > Displays
-- Uncheck 'Show date' in System Settings > Control Center > Clock Options...
-- Change appearance to dark
-- Disable 'Force Click and haptic feedback' in System Settings > Trackpad
-- Authorize Music
+- Set resolution to "More Space" in System Settings > Displays
+- Disable "Automatically adjust brightness" in System Settings > Displays
+- Disable "Force Click and haptic feedback" in System Settings > Trackpad
+- Disable "Drag windows to mene bar to fill screen in System Settings > Desktop & Dock
+- Enable "Use scroll gesture with modifier keys to zoom" in System Settings > Accessibility > Zoom
+
+App Store iOS apps
+- kino.de
+- Proton Authenticator
+- Provenance
+- put.io
+- SwitchBot
 
 Chrome
-- Add 'https://www.dropbox.com/s/raw/<id>/AdblockPlusFilterList.txt' to the 'Adblock Plus' filter list
 - Set up Tampermonkey Dropbox sync
 
 AppCleaner
@@ -155,10 +160,29 @@ Tower
 
 PixelSnap
 - Enter license
+- Change global hotkey to Shift-Command-6
+
+MoneyMoney
+- Copy database
+
+iTerm
+- General > Set shell to login shell
+- General > Reuse previous session's directory
+- Terminal > Disable show mark indicators
+
+OpenInTerminal-Lite
+- Open and set up
+- Add to toolbar in Finder
+
+DevUtils
+- Activate license
+
+SwiftBar
+- Set plugin path to Dropbox/Apps/SwiftBar
 
 Accounts
 - Add Feedly and Instapaper accounts to Reeder
 - Sign in to Mimestream with Google
-- Sign in to Slack
 - Sign in to Mate Translate
+- Sign in to Bitwarden
 EOF

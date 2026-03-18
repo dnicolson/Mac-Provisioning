@@ -10,20 +10,7 @@ if [[ ! -s $PREFS ]]; then
   exit
 fi
 
-TIMESTAMP=$(python2 - <<END
-from datetime import datetime
-
-def calculateTimestamp():
-    epoch = datetime(1601, 1, 1)
-    utcnow = datetime.strptime(datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S.%f'), '%Y-%m-%d %H:%M:%S.%f')
-    diff = utcnow - epoch
-    secondsInDay = 60 * 60 * 24
-    return '{}{:06d}'.format(diff.days * secondsInDay + diff.seconds, diff.microseconds)
-print calculateTimestamp()
-END
-)
-
-# Handlers (chrome://settings/handlers?search=handlers)
+# Handlers (chrome://settings/handlers)
 HAS_CUSTOM_HANDLERS=`cat "$PREFS" | jq '.custom_handlers'`
 if [ "$HAS_CUSTOM_HANDLERS" == "null" ]; then
   echo "Adding custom_handlers object"
@@ -37,7 +24,6 @@ if [ $HAS_MAILTO != "true" ]; then
   MAILTO=$(cat <<END
   {
     "default": true,
-    "last_modified": "$TIMESTAMP",
     "protocol": "mailto",
     "url": "https://mail.google.com/mail/?extsrc=mailto&url=%s"
   }
@@ -53,7 +39,6 @@ if [ $HAS_WEBCAL != "true" ]; then
   WEBCAL=$(cat <<END
   {
     "default": true,
-    "last_modified": "$TIMESTAMP",
     "protocol": "webcal",
     "url": "https://calendar.google.com/calendar/r?cid=%s"
   }
@@ -69,7 +54,6 @@ if [ $HAS_MAGNET != "true" ]; then
   MAGNET=$(cat <<END
   {
     "default": true,
-    "last_modified": "$TIMESTAMP",
     "protocol": "magnet",
     "url": "https://app.put.io/newfile?magnet=%s"
   }
