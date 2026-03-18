@@ -34,7 +34,7 @@ open -a "App Store"
 read -p "ℹ️  Log in to the App Store and press any key..."
 
 # Install Casks that require a password
-brew install --cask macfuse docker vmware-fusion paragon-ntfs qlvideo xquartz adoptopenjdk8 zoom
+brew install --cask macfuse zoom
 
 # Install Brews, Casks and MAS apps
 brew install mas
@@ -70,7 +70,6 @@ dockutil --no-restart --add "/System/Applications/Music.app"
 dockutil --no-restart --add "/System/Applications/Photos.app"
 dockutil --no-restart --add "/Applications/Mimestream.app"
 dockutil --no-restart --add "/System/Applications/Messages.app"
-dockutil --no-restart --add "/Applications/Messenger.app"
 dockutil --no-restart --add "/Applications/Reeder.app"
 dockutil --no-restart --add "/Applications/Bitwarden.app"
 dockutil --no-restart --add "/Applications/TickTick.app"
@@ -90,6 +89,7 @@ dockutil --no-restart --add "/Applications/iTerm.app"
 dockutil --no-restart --add "/System/Applications/Utilities/Console.app"
 dockutil --no-restart --add "/System/Applications/Utilities/Activity Monitor.app"
 dockutil --no-restart --add "/System/Applications/Home.app"
+dockutil --no-restart --add "/Applications/ChatGPT.app"
 dockutil --no-restart --add "/Applications/Streaks.app"
 dockutil --no-restart --add "/Applications/Grammatisch.app"
 
@@ -98,8 +98,8 @@ killall Dock
 # Defaults
 ./defaults.sh
 
-# Add OpenInTerminal-Lite.app to Finder
-./defaults/finder.sh
+# Add OpenInTerminal-Lite.app to Finder (broken)
+# ./defaults/finder.sh
 
 # Set Dropbox defaults
 ./defaults/dropbox.sh

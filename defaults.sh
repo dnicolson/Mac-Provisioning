@@ -78,9 +78,6 @@ killall SystemUIServer
 # Add login items
 osascript -e 'tell application "System Events" to make login item at end with properties {name: "Dropbox", path: "/Applications/Dropbox.app"}' > /dev/null
 osascript -e 'tell application "System Events" to make login item at end with properties {name: "Itsycal", path: "/Applications/Itsycal.app"}' > /dev/null
-osascript -e 'tell application "System Events" to make login item at end with properties {name: "MacMediaKeyForwarder", path: "/Applications/MacMediaKeyForwarder.app"}' > /dev/null
-osascript -e 'tell application "System Events" to make login item at end with properties {name: "Übersicht", path: "/Applications/Übersicht.app"}' > /dev/null
-osascript -e 'tell application "System Events" to make login item at end with properties {name: "xbar", path: "/Applications/xbar.app"}' > /dev/null
 
 # Screen Saver
 defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName Aerial path ~/Library/Screen\ Savers/Aerial.saver type 0
