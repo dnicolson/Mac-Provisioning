@@ -43,6 +43,8 @@ brew bundle
 # Remove quarantine
 xattr -r -d com.apple.quarantine /Applications 2> /dev/null
 xattr -r -d com.apple.quarantine ~/Library/QuickLook
+xattr -d com.apple.quarantine /Applications/Alacritty.app
+xattr -d com.apple.quarantine /Applications/QLMarkdown.app
 
 # Wait for Dropbox
 read -p "ℹ️  Set up Dropbox and press any key..."
@@ -71,6 +73,7 @@ dockutil --no-restart --add "/System/Applications/Photos.app"
 dockutil --no-restart --add "/Applications/Mimestream.app"
 dockutil --no-restart --add "/System/Applications/Messages.app"
 dockutil --no-restart --add "/Applications/Reeder.app"
+dockutil --no-restart --add "/Applications/Instapaper.app"
 dockutil --no-restart --add "/Applications/Bitwarden.app"
 dockutil --no-restart --add "/Applications/TickTick.app"
 dockutil --no-restart --add "/System/Applications/Notes.app"
@@ -121,9 +124,10 @@ echo -e "\033[1mFinal Steps\033[0m"
 cat << EOF
 macOS
 - Set resolution to "More Space" in System Settings > Displays
+- Uncheck 'Show date' in System Settings > Menu Bar > Clock Options...
 - Disable "Automatically adjust brightness" in System Settings > Displays
 - Disable "Force Click and haptic feedback" in System Settings > Trackpad
-- Disable "Drag windows to mene bar to fill screen in System Settings > Desktop & Dock
+- Disable "Drag windows to menu bar to fill screen in System Settings > Desktop & Dock
 - Enable "Use scroll gesture with modifier keys to zoom" in System Settings > Accessibility > Zoom
 
 App Store iOS apps
@@ -132,6 +136,9 @@ App Store iOS apps
 - Provenance
 - put.io
 - SwitchBot
+
+Contacts
+- Add Google account for contacts and calendars
 
 Chrome
 - Set up Tampermonkey Dropbox sync
@@ -157,6 +164,7 @@ TopNotch
 
 Tower
 - Activate license
+- Install command line utility
 
 PixelSnap
 - Enter license
