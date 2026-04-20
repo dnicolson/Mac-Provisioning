@@ -1,4 +1,5 @@
 com.microsoft.VSCode .c      all
+com.microsoft.VSCode .cpp    all
 com.microsoft.VSCode .js     all
 com.microsoft.VSCode .jsx    all
 com.microsoft.VSCode .conf   all
@@ -53,35 +54,33 @@ com.microsoft.VSCode .ts     all
 com.microsoft.VSCode .tsx    all
 com.microsoft.VSCode .go     all
 
-com.google.chrome.canary http  all
-com.google.chrome.canary https all
+com.google.chrome http       all
+com.google.chrome https      all
 
 com.mimestream.Mimestream mailto
 
-org.videolan.vlc .mp4 all
-org.videolan.vlc .mkv all
-org.videolan.vlc .avi all
-jp.tmkk.XLD .flac all
+org.videolan.vlc .mp4        all
+org.videolan.vlc .mkv        all
+org.videolan.vlc .avi        all
+jp.tmkk.XLD .flac            all
 
-cx.c3.theunarchiver .7z     all
-cx.c3.theunarchiver .cab    all
-cx.c3.theunarchiver .gtar   all
-cx.c3.theunarchiver .gz     all
-cx.c3.theunarchiver .hqx    all
-cx.c3.theunarchiver .jar    all
-cx.c3.theunarchiver .msi    all
-cx.c3.theunarchiver .rar    all
-cx.c3.theunarchiver .sit    all
-cx.c3.theunarchiver .tar    all
-cx.c3.theunarchiver .tar.gz all
-cx.c3.theunarchiver .tgz    all
-cx.c3.theunarchiver .zip    all
+cx.c3.theunarchiver .7z      all
+cx.c3.theunarchiver .cab     all
+cx.c3.theunarchiver .gtar    all
+cx.c3.theunarchiver .gz      all
+cx.c3.theunarchiver .hqx     all
+cx.c3.theunarchiver .jar     all
+cx.c3.theunarchiver .msi     all
+cx.c3.theunarchiver .rar     all
+cx.c3.theunarchiver .sit     all
+cx.c3.theunarchiver .tar     all
+cx.c3.theunarchiver .tar.gz  all
+cx.c3.theunarchiver .tgz     all
+cx.c3.theunarchiver .zip     all
 
-com.webinhq.ReadKit feed
+com.apple.iBooksX .epub      all
 
-com.apple.iBooksX .epub all
-
-com.uranusjr.macdown .md all
+com.uranusjr.macdown .md     all
 
 com.kodlian.Icon-Slate .ico  all
 com.kodlian.Icon-Slate .icns all
