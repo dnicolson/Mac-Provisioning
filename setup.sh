@@ -101,8 +101,8 @@ killall Dock
 # Defaults
 ./defaults.sh
 
-# Add OpenInTerminal-Lite.app to Finder (broken)
-# ./defaults/finder.sh
+# Set Finder defaults
+./defaults/finder.sh
 
 # Set Dropbox defaults
 ./defaults/dropbox.sh
