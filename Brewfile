@@ -56,6 +56,7 @@ cask "kaleidoscope"
 cask "kap"
 cask "launchcontrol"
 cask "macfuse"
+cask "mate-translate"
 cask "mimestream"
 cask "macdown-3000"
 cask "netnewswire"
@@ -104,7 +105,6 @@ mas "Grammatisch", id: 1163927830
 mas "Icon Slate", id: 439697913
 mas "Infuse", id: 1136220934
 mas "Instapaper", id: 288545208
-mas "Mate Translate", id: 1005088137
 mas "MoneyMoney", id: 872698314
 mas "OmniFocus", id: 1542143627
 mas "PowerToYou", id: 1558154409

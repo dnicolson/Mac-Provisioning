@@ -127,6 +127,7 @@ macOS
 - Uncheck 'Show date' in System Settings > Menu Bar > Clock Options...
 - Disable "Automatically adjust brightness" in System Settings > Displays
 - Disable "Force Click and haptic feedback" in System Settings > Trackpad
+- Disable "Drag windows to left or right edge of screen to tile" in System Settings > Desktop & Dock
 - Disable "Drag windows to menu bar to fill screen in System Settings > Desktop & Dock
 - Enable "Use scroll gesture with modifier keys to zoom" in System Settings > Accessibility > Zoom
 
@@ -136,6 +137,9 @@ App Store iOS apps
 - Provenance
 - put.io
 - SwitchBot
+
+Bitwarden
+- Disable status menu
 
 Contacts
 - Add Google account for contacts and calendars
@@ -169,6 +173,7 @@ Tower
 PixelSnap
 - Enter license
 - Change global hotkey to Shift-Command-6
+- Disable status menu
 
 MoneyMoney
 - Copy database
@@ -184,6 +189,10 @@ OpenInTerminal-Lite
 
 DevUtils
 - Activate license
+- Disable status menu
+
+Streaks
+- Disable status menu
 
 SwiftBar
 - Set plugin path to Dropbox/Apps/SwiftBar
