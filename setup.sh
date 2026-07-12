@@ -44,7 +44,6 @@ brew bundle
 xattr -r -d com.apple.quarantine /Applications 2> /dev/null
 xattr -r -d com.apple.quarantine ~/Library/QuickLook
 xattr -d com.apple.quarantine /Applications/Alacritty.app
-xattr -d com.apple.quarantine /Applications/QLMarkdown.app
 
 # Wait for Dropbox
 read -p "ℹ️  Set up Dropbox and press any key..."
