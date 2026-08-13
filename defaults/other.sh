@@ -17,3 +17,6 @@ defaults write com.TickTick.task.mac TKShowOrHideAppHotkeyIdentifier -data ""
 
 # Calendar
 defaults write com.apple.iCal "display birthdays calendar" 0
+
+# Reeder
+defaults write com.reederapp.5.macOS article.pull-to-next-prev 0
