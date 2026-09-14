@@ -110,7 +110,7 @@ killall Dock
 ./defaults/other.sh
 
 # Set default file handlers
-duti handlers.duti
+mda apply handlers.duti
 
 # Create locate database
 sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
