@@ -112,6 +112,11 @@ killall Dock
 # Set default file handlers
 mda apply handlers.duti
 
+# Install Open Project in Editor extension for Raycast
+git clone https://github.com/dnicolson/raycast-open-project-in-editor.git
+./raycast-open-project-in-editor/install.sh
+rm -rf raycast-open-project-in-editor
+
 # Create locate database
 sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
 
