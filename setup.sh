@@ -57,7 +57,9 @@ mise install
 echo $BIN_PATH/fish | sudo tee -a /etc/shells
 chsh -s $BIN_PATH/fish
 
-# Restart QuickLook
+# Quick Look
+pluginkit -e ignore -i studio.appahead.AA7.Markdown-Quick-Look-Extension
+killall -9 quicklookd QuickLookUIService
 qlmanage -r
 
 # Show ~/Library folder
